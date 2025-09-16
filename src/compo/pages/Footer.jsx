@@ -2,7 +2,7 @@ import React from 'react'
 
 const Footer = () => {
   return (
-    <footer className="bg-[#0b0c2a] text-white px-8 py-16 md:px-20">
+    <footer className="bg-gradient-to-r from-[#141e30] to-[#243b55] text-white p-6 md:p-12">
       <div className="grid md:grid-cols-2 gap-10">
         {/* Left Side */}
         <div>
@@ -26,7 +26,7 @@ const Footer = () => {
             <h3 className="text-gray-400 uppercase text-sm">Send us a note</h3>
             <a
               href="mailto:hello@unikorns.work"
-              className="text-lg font-semibold hover:text-purple-400"
+              className="text-lg font-semibold hover:underline"
             >
               rishavr741@gmail.com
             </a>
@@ -35,10 +35,10 @@ const Footer = () => {
           <div>
             <h3 className="text-gray-400 uppercase text-sm">Stalk us :</h3>
             <ul className="space-y-2">
-              <li><a href="https://www.instagram.com/rixhavraj?igsh=i" className="hover:text-purple-400">Instagram</a></li>
+              <li><a href="https://www.instagram.com/rixhavraj?igsh=i" target='_blank' className="hover:underline">Instagram</a></li>
               {/* <li><a href="#" className="hover:text-purple-400">Facebook</a></li> */}
-              <li><a href="https://www.linkedin.com/in/rixhavraj" className="hover:text-purple-400">LinkedIn</a></li>
-              <li><a href="https://github.com/rixhavraj" className="hover:text-purple-400">Github</a></li>
+              <li><a href="https://www.linkedin.com/in/rixhavraj" className="hover:underline">LinkedIn</a></li>
+              <li><a href="https://github.com/rixhavraj" className="hover:underline">Github</a></li>
              
             </ul>
           </div>
