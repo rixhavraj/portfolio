@@ -1,27 +1,26 @@
 import React from 'react'
-import { FadeInUp } from '../animations/Fadein'
-import { SlideInLeft } from '../animations/Sideinleft'
-import { SlideInRight } from '../animations/Sideinright'
 
-const About= ()=> {
+
+const About = () => {
   return (
 
     <>
-      <div className='min-h-screen h-screen flext flex-col justify-center item-center text-center bg-gradient-to-b from green-900 via-gray-900 to-black text-'>
+      <div className='min-h-screen h-screen flext flex-col justify-center item-center text-center bg-gradient-to-b from green-900 via-gray-900 to-black'>
 
         <section className='h-screen flex flex-col justify-center items-center text-center px-6'>
-        <h1 className ='text-4xl md:text-6xl text-white font-extrabold mb-4'>
-          Welcome to <span className='text-blue-500'> My PortFolio Website</span>
-        </h1>
-        <p className='text-lg md:text-xl text-gray-300 max-w-2xl mb-6 font-bold'>
-          I build modern websites experienced with React, Tailwindcss, and cutting-edge tools
-        </p>
-        <a href="/services" className= 'border border-white hover:bg-blue-700 text-white  px-6 py-3 rounded-full text-lg font-medium transition'>Get Started</a>
-      </section>
+          <h1 className='text-4xl md:text-6xl text-white font-extrabold mb-4'>
+            Welcome to <span className='text-blue-500'> My PortFolio Website</span>
+          </h1>
+          <p className='text-lg md:text-xl text-gray-300 max-w-2xl mb-6 font-bold'>
+            I build modern websites experienced with React, Tailwindcss, and cutting-edge tools
+          </p>
+          <a href="/services" className='border border-white hover:bg-blue-700 text-white  px-6 py-3 rounded-full text-lg font-medium transition'>Get Started</a>
 
-      
+        </section>
 
-      {/* <section className='relative h-screen flex flex-col justify-center items-center text-center'
+
+
+        {/* <section className='relative h-screen flex flex-col justify-center items-center text-center'
       style={{backgroundImage: 'image', backgroundSize:'cover'}} >
         <div className='absolute insert-0 bg-black/70'></div>
         <div className='relative z-10'>
@@ -34,12 +33,12 @@ const About= ()=> {
         </div>
       </section> */}
 
-      
-    </div>
 
-    <section className="relative flex flex-col md:flex-row items-center justify-center min-h-screen bg-amber-50">
+      </div>
+
+      <section className="relative flex flex-col md:flex-row items-center justify-center min-h-screen bg-amber-50">
         {/* Left Section with Social Icons */}
-       
+
 
         {/* Hero Content Section */}
         <div className="relative flex-1 p-8 md:p-16 lg:p-24 text-center md:text-left">
@@ -59,8 +58,8 @@ const About= ()=> {
         <div className="relative flex-1 min-h-screen">
           <div className="absolute inset-0  transform skew-y-12 md:skew-y-0 md:skew-x-12 origin-bottom-right" style={{ clipPath: 'polygon(0 0, 100% 0, 100% 100%, 25% 100%)' }}></div>
           <div className="absolute inset-0 flex items-center justify-center p-8 md:p-16 lg:p-24">
-            <img 
-              src="IMG-20250720-WA0004[1].jpg" 
+            <img
+              src="IMG-20250720-WA0004[1].jpg"
               alt="A smiling developer"
               className="relative z-10 w-full h-auto max-w-sm rounded-lg shadow-lg"
             />
