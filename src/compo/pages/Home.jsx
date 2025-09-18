@@ -39,7 +39,7 @@ const Home = () => {
             <p className="text-lg md:text-xl text-green-500 font-bold mb-2">Hello I'm</p>
             <h1 className="text-4xl md:text-6xl font-bold mb-4">Rishav Raj</h1>
             <h2 className="text-xl md:text-2xl font-semibold mb-4">Professional Freelance Web Designer</h2>
-            <p className="text-gray-600 mb-8">
+            <p className="text-gray-900 mb-8">
               I am a Freelancer skilled in web development with react and tailwindcss and experienced with wordpress, started as a curious student who loved solving puzzles with code. Over the years, I've evolved into a full-stack developer who thrives on creating seamless user experiences and robust backend systems. When I'm not coding, you'll find me exploring new technologies, contributing to open source projects, or mentoring aspiring developers in my community..
             </p>
             <button><a href='#' className='border  black px-6 py-3 rounded-full hover:bg-green-500 hover:text-white transition'>Hire me</a>
@@ -49,8 +49,8 @@ const Home = () => {
 
         {/* Right Section with Image and Background Shape */}
         <div className="relative flex-1 min-h-screen">
-          <div className="absolute inset-0  transform skew-y-12 md:skew-y-0 md:skew-x-12 origin-bottom-right" style={{ clipPath: 'polygon(0 0, 100% 0, 100% 100%, 25% 100%)' }}></div>
-          <div className="absolute inset-0 flex items-center justify-center p-8 md:p-16 lg:p-24">
+          <div className="absolute inset-0  transform skew-y-12 md:skew-y-0 md:skew-x-12 origin-bottom-right"></div>
+          <div className=" justify-center p-8 md:p-16 lg:p-24">
             <img
               src="IMG-20250720-WA0004[1].jpg"
               alt="A smiling developer"
