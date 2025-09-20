@@ -14,7 +14,7 @@ const About = () => {
           <p className='text-lg md:text-xl text-gray-300 max-w-2xl mb-6 font-bold'>
             I build modern websites experienced with React, Tailwindcss, and cutting-edge tools
           </p>
-          <a href="/services" className='border border-white hover:bg-blue-700 text-white  px-6 py-3 rounded-full text-lg font-medium transition'>Get Started</a>
+          <a href="#" className='border border-white hover:bg-blue-700 text-white  px-6 py-3 rounded-full text-lg font-medium transition'>Get Started</a>
 
         </section>
 

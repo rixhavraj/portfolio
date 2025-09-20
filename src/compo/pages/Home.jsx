@@ -40,7 +40,7 @@ const Home = () => {
             <h1 className="text-4xl md:text-6xl font-bold mb-4">Rishav Raj</h1>
             <h2 className="text-xl md:text-2xl font-semibold mb-4">Professional Freelance Web Designer</h2>
             <p className="text-gray-900 mb-8">
-              I am a Freelancer skilled in web development with react and tailwindcss and experienced with wordpress, started as a curious student who loved solving puzzles with code. Over the years, I've evolved into a full-stack developer who thrives on creating seamless user experiences and robust backend systems. When I'm not coding, you'll find me exploring new technologies, contributing to open source projects, or mentoring aspiring developers in my community..
+              I am a Freelancer skilled in web development with react and tailwindcss and experienced with wordpress, started as a curious student who loved solving puzzles with code. Over the years, I've evolved into a full-stack developer who thrives on creating seamless user experiences and robust backend systems. When I'm not coding, you'll find me exploring new technologies, contributing to open source projects, or mentoring aspiring developers in my community.
             </p>
             <button><a href='#' className='border  black px-6 py-3 rounded-full hover:bg-green-500 hover:text-white transition'>Hire me</a>
             </button>

@@ -33,12 +33,12 @@ const Footer = () => {
           </div>
 
           <div>
-            <h3 className="text-gray-400 uppercase text-sm">Stalk us :</h3>
+            <h3 className="text-gray-400 uppercase text-sm">Follow me on:</h3>
             <ul className="space-y-2">
               <li><a href="https://www.instagram.com/rixhavraj?igsh=i" target='_blank' className="hover:underline">Instagram</a></li>
               {/* <li><a href="#" className="hover:text-purple-400">Facebook</a></li> */}
-              <li><a href="https://www.linkedin.com/in/rixhavraj" className="hover:underline">LinkedIn</a></li>
-              <li><a href="https://github.com/rixhavraj" className="hover:underline">Github</a></li>
+              <li><a href="https://www.linkedin.com/in/rixhavraj" target='_blank' className="hover:underline">LinkedIn</a></li>
+              <li><a href="https://github.com/rixhavraj" target='_blank' className="hover:underline">Github</a></li>
              
             </ul>
           </div>
