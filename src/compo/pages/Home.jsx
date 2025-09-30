@@ -179,6 +179,90 @@ const Home = () => {
         </div>
       </section>
 
+      <section className="bg-[#f4f2ee] min-h-screen flex items-center justify-center px-6 py-12">
+        <div className="max-w-6xl w-full grid md:grid-cols-2 gap-10 items-center">
+          {/* Left side text */}
+          <div>
+            <h1 className="text-5xl md:text-6xl font-extrabold text-gray-900 leading-tight mb-6">
+              wordpress
+            </h1>
+
+            <h2 className="font-bold text-lg text-gray-900 mb-3">
+              Describtion
+            </h2>
+
+            <p className="text-gray-700 leading-relaxed mb-6">
+              I am a WordPress expert with strong experience in building, customizing, and managing professional websites. I specialize in using page builders like Elementor to create responsive and visually appealing designs tailored to client needs. My skills include theme customization, plugin integration, and optimizing site performance and SEO. I’m also proficient in HTML, CSS, and basic PHP, allowing me to implement custom functionality and styling when required. I’ve delivered several client projects, ensuring fast load times, mobile responsiveness, and a seamless user experience. From landing pages to full websites, I handle content structuring, page management, and security setup with precision. Whether it’s troubleshooting technical issues or enhancing site aesthetics, I bring a problem-solving mindset and a focus on quality. My goal is to create WordPress sites that are not only functional but also scalable and easy to maintain.
+            </p>
+
+            <a
+              href="https://tekurious.in/" target="_blank" // Or any other URL
+              className="inline-block text-center bg-[#FD4556] text-white font-bold tracking-wider px-8 py-3 hover:bg-red-900 transition-colors duration-300 rounded-sm"
+            >
+              More
+            </a>
+          </div>
+
+          {/* Right side image */}
+          <div className="w-full h-full flex items-center justify-center">
+            <video
+              src="Screen Recording 2025-09-16 222521.mp4"
+              autoPlay
+              loop
+              muted
+              playsInline
+              className="w-full h-auto rounded-md shadow-2xl"
+            ></video>
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-[#f4f2ee] min-h-screen flex items-center justify-center px-6 py-12">
+        <div className="max-w-6xl w-full grid md:grid-cols-2 gap-10 items-center">
+          {/* Left side text */}
+          <div>
+            <h1 className="text-5xl md:text-6xl font-extrabold text-gray-900 leading-tight mb-6">
+              WEBDEV
+            </h1>
+
+            <h2 className="font-bold text-lg text-gray-900 mb-3">
+              Describtion
+            </h2>
+
+            <p className="text-gray-700 leading-relaxed mb-6">
+              A sophisticated, responsive portfolio website built with React and Tailwind CSS, featuring smooth scroll-triggered animations and modern design principles. This project demonstrates advanced front-end development skills and attention to user experience details.
+              <br></br>
+
+              <b>Features:</b>
+
+              Smooth Scroll Animations: Custom-built animation system using Intersection Observer API for performance-optimized scroll-triggered effects
+              <br></br>
+              Responsive Design: Mobile-first approach ensuring perfect display across all devices and screen sizes
+              <br></br>
+              Modern UI/UX: Clean, professional design with carefully selected color palette and typography
+              <br></br>
+              Interactive Navigation: Fixed navigation bar with smooth scrolling to sections and dynamic background changes
+              <br></br>
+              Performance Optimized: Lightweight animations using CSS transforms and transitions for 60fps performance
+              <br></br>
+              Accessibility Focused**: Proper contrast ratios, semantic HTML, and screen reader compatibility
+            </p>
+          </div>
+
+          {/* Right side image */}
+          <div className="w-full h-full flex items-center justify-center">
+            <video
+              src="Screen Recording 2025-09-16 224952.mp4"
+              autoPlay
+              loop
+              muted
+              playsInline
+              className="w-full h-auto rounded-md shadow-2xl"
+            ></video>
+          </div>
+        </div>
+      </section>
+
 
       {/* <section className='h-screen flex flex-col justify-center items-center text-center px-6'>
         <h1 className ='text-4xl md:text-6xl text-white font-extrabold mb-4'>
