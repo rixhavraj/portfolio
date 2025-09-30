@@ -56,8 +56,8 @@ const About = () => {
 
         {/* Right Section with Image and Background Shape */}
         <div className="relative flex-1 min-h-screen">
-          <div className="absolute inset-0  transform skew-y-12 md:skew-y-0 md:skew-x-12 origin-bottom-right" style={{ clipPath: 'polygon(0 0, 100% 0, 100% 100%, 25% 100%)' }}></div>
-          <div className="absolute inset-0 flex items-center justify-center p-8 md:p-16 lg:p-24">
+          <div className="absolute inset-0  transform skew-y-12 md:skew-y-0 md:skew-x-12 origin-bottom-right"></div>
+          <div className=" justify-center p-8 md:p-16 lg:p-24">
             <img
               src="IMG-20250720-WA0004[1].jpg"
               alt="A smiling developer"
