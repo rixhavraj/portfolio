@@ -69,13 +69,13 @@ const Home = () => {
             <div className="flex flex-col space-y-4">
               <div className="flex items-center space-x-2">
                 <div className="w-8 h-8 flex items-center justify-center bg-gray-900 text-white rounded-full font-bold">1</div>
-                <h2 className="text-xl font-bold">Preparation</h2>
+                <h2 className="text-xl font-bold">PREPATION</h2>
               </div>
               <ul className="list-none space-y-2 text-gray-900">
-                <li className='hover:text-lg'>Filling out the brief</li>
-                <li className='hover:text-lg'>Initial analysis</li>
-                <li className='hover:text-lg'>Client kick-off</li>
-                <li className='hover:text-lg'>Planning</li>
+                <li className='hover:text-lg'>• Filling out the brief</li>
+                <li className='hover:text-lg'>• Initial analysis</li>
+                <li className='hover:text-lg'>• Client kick-off</li>
+                <li className='hover:text-lg'>• Planning</li>
               </ul>
             </div>
 
@@ -83,14 +83,14 @@ const Home = () => {
             <div className="flex flex-col space-y-4">
               <div className="flex items-center space-x-2">
                 <div className="w-8 h-8 flex items-center justify-center bg-gray-900 text-white rounded-full font-bold">2</div>
-                <h2 className="text-xl font-bold">Design</h2>
+                <h2 className="text-xl font-bold">DESIGN</h2>
               </div>
               <ul className="list-none space-y-2 text-gray-900">
-                <li className='hover:text-lg'>Gathering the content</li>
-                <li className='hover:text-lg'>Wireframing</li>
-                <li className='hover:text-lg'>Style exploration</li>
-                <li className='hover:text-lg'>Creating Hi-Fi concept</li>
-                <li className='hover:text-lg'>Developer review</li>
+                <li className='hover:text-lg'>• Gathering the content</li>
+                <li className='hover:text-lg'>• Wireframing</li>
+                <li className='hover:text-lg'>• Style exploration</li>
+                <li className='hover:text-lg'>• Creating Hi-Fi concept</li>  
+                <li className='hover:text-lg'>• Developer review</li>
               </ul>
             </div>
 
@@ -98,14 +98,14 @@ const Home = () => {
             <div className="flex flex-col space-y-4">
               <div className="flex items-center space-x-2">
                 <div className="w-8 h-8 flex items-center justify-center bg-gray-900 text-white rounded-full font-bold">3</div>
-                <h2 className="text-xl font-bold">Development</h2>
+                <h2 className="text-xl font-bold">DEVELOPMENT</h2>
               </div>
               <ul className="list-none space-y-2 text-gray-900">
-                <li className='hover:text-lg'>Project setup</li>
-                <li className='hover:text-lg'>UI development</li>
-                <li className='hover:text-lg'>Design review</li>
-                <li className='hover:text-lg'>CMS connection</li>
-                <li className='hover:text-lg'>QA review</li>
+                <li className='hover:text-lg'>• Project setup</li>
+                <li className='hover:text-lg'>• UI development</li>
+                <li className='hover:text-lg'>• Design review</li>
+                <li className='hover:text-lg'>• CMS connection</li>
+                <li className='hover:text-lg'>• QA review</li>
               </ul>
             </div>
 
@@ -113,14 +113,14 @@ const Home = () => {
             <div className="flex flex-col space-y-4">
               <div className="flex items-center space-x-2">
                 <div className="w-8 h-8 flex items-center justify-center bg-gray-900 text-white rounded-full font-bold">4</div>
-                <h2 className="text-xl font-bold">Handover</h2>
+                <h2 className="text-xl font-bold">HANDOVER </h2>
               </div>
               <ul className="list-none space-y-2 text-gray-900">
-                <li className='hover:text-lg'>Hosting setup</li>
-                <li className='hover:text-lg'>Deployment</li>
-                <li className='hover:text-lg'>Design assets transfer</li>
-                <li className='hover:text-lg'>Launch</li>
-                <li className='hover:text-lg'>Beer party! 🍻</li>
+                <li className='hover:text-lg'>• Hosting setup</li>
+                <li className='hover:text-lg'>• Deployment</li>
+                <li className='hover:text-lg'>• Design assets transfer</li>
+                <li className='hover:text-lg'>• Launch</li>
+                <li className='hover:text-lg'>• Beer party! 🍻</li> 
               </ul>
             </div>
           </div>
@@ -130,7 +130,7 @@ const Home = () => {
       <section className="bg-amber-50 text-black py-16 px-6">
         <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12 text-center">
           <div>
-            <img src="htm.png" alt="HTML" className="mx-auto w-20 mb-4" />
+            <img src="icons8-html-5-144.png" alt="HTML" className="mx-auto w-20 mb-4" />
             <h3 className="font-bold text-xl">HTML</h3>
             <p className="text-gray-900 mt-2">
               I have strong expertise in HTML for creating well-structured and responsive web pages.
@@ -146,7 +146,7 @@ const Home = () => {
           </div>
 
           <div>
-            <img src="cpp.png" alt="JavaScript" className="mx-auto w-20 mb-4" />
+            <img src="C++ Icon.png" alt="JavaScript" className="mx-auto w-25 mb-6" />
             <h3 className="font-bold text-xl">C++</h3>
             <p className="text-gray-900 mt-2">
               I have knowledge of c++, which strengthens my problem-solving and programming logic.
@@ -184,11 +184,11 @@ const Home = () => {
           {/* Left side text */}
           <div>
             <h1 className="text-5xl md:text-6xl font-extrabold text-gray-900 leading-tight mb-6">
-              wordpress
+              WORDPRESS
             </h1>
 
             <h2 className="font-bold text-lg text-gray-900 mb-3">
-              Describtion
+              Description
             </h2>
 
             <p className="text-gray-700 leading-relaxed mb-6">
@@ -226,7 +226,7 @@ const Home = () => {
             </h1>
 
             <h2 className="font-bold text-lg text-gray-900 mb-3">
-              Describtion
+              Description
             </h2>
 
             <p className="text-gray-700 leading-relaxed mb-6">
@@ -234,18 +234,19 @@ const Home = () => {
               <br></br>
 
               <b>Features:</b>
+              <br></br>
 
-              Smooth Scroll Animations: Custom-built animation system using Intersection Observer API for performance-optimized scroll-triggered effects
+              • <b>Smooth Scroll Animations</b> : Custom-built animation system using Intersection Observer API for performance-optimized scroll-triggered effects
               <br></br>
-              Responsive Design: Mobile-first approach ensuring perfect display across all devices and screen sizes
+              • <b>Responsive Design</b> : Mobile-first approach ensuring perfect display across all devices and screen sizes
               <br></br>
-              Modern UI/UX: Clean, professional design with carefully selected color palette and typography
+              • <b>Modern UI/UX</b> : Clean, professional design with carefully selected color palette and typography
               <br></br>
-              Interactive Navigation: Fixed navigation bar with smooth scrolling to sections and dynamic background changes
+              • <b>Interactive Navigation</b> : Fixed navigation bar with smooth scrolling to sections and dynamic background changes
               <br></br>
-              Performance Optimized: Lightweight animations using CSS transforms and transitions for 60fps performance
+              • <b>Performance Optimized</b> : Lightweight animations using CSS transforms and transitions for 60fps performance
               <br></br>
-              Accessibility Focused**: Proper contrast ratios, semantic HTML, and screen reader compatibility
+              • <b>Accessibility Focused</b> : Proper contrast ratios, semantic HTML, and screen reader compatibility
             </p>
           </div>
 
