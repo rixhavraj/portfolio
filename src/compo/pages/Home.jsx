@@ -146,7 +146,7 @@ const Home = () => {
           </div>
 
           <div>
-            <img src="C++ Icon.png" alt="cpp" className="mx-auto w-25 mb-6" />
+            <img src="cpp.png" alt="cpp" className="mx-auto w-20 mb-4" />
             <h3 className="font-bold text-xl">C++</h3>
             <p className="text-gray-900 mt-2">
               I have knowledge of c++, which strengthens my problem-solving and programming logic.
