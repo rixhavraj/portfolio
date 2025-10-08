@@ -39,6 +39,7 @@ const Footer = () => {
               {/* <li><a href="#" className="hover:text-purple-400">Facebook</a></li> */}
               <li><a href="https://www.linkedin.com/in/rixhavraj" target='_blank' className="hover:underline">LinkedIn</a></li>
               <li><a href="https://github.com/rixhavraj" target='_blank' className="hover:underline">Github</a></li>
+              <li><a href = "https://x.com/rixhavraj" target='_blank' className = "hover:underline">𝕏</a></li>
              
             </ul>
           </div>
