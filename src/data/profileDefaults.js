@@ -3,7 +3,7 @@ export const defaultProfile = {
     name: 'Rishav Raj',
     tagline: 'Tech student. Product engineer. Community builder.',
     descriptor: 'Engineer | Designer | Mentor',
-    location: 'Patna, India',
+    location: 'Delhi, India',
     email: 'rishavr741@gmail.com',
     photo: '/IMG-20250720-WA0004[1].jpg',
     socials: [
@@ -60,19 +60,19 @@ export const defaultProfile = {
   skillTracks: [
     {
       badge: 'Frontend',
-      title: 'React Â| Vite Â| Tailwind Â| GSAP',
+      title: 'React ï¿½| Vite ï¿½| Tailwind ï¿½| GSAP',
       progress: 92,
       summary: 'Reusable component libraries, accessibility, scroll-trigger storytelling.',
     },
     {
       badge: 'Backend',
-      title: 'Node Â| Express Â| REST Â| Prisma',
+      title: 'Node ï¿½| Express ï¿½| REST ï¿½| Prisma',
       progress: 78,
       summary: 'Secure APIs, API gateway integrations, and Postgres/MySQL operations.',
     },
     {
       badge: 'Cloud & Ops',
-      title: 'Vercel Â| Docker Â| CI/CD',
+      title: 'Vercel ï¿½| Docker ï¿½| CI/CD',
       progress: 74,
       summary: 'Preview deployments, telemetry dashboards, and release automation.',
     },
