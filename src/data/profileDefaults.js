@@ -60,19 +60,19 @@ export const defaultProfile = {
   skillTracks: [
     {
       badge: 'Frontend',
-      title: 'React �| Vite �| Tailwind �| GSAP',
+      title: 'React Â| Vite Â| Tailwind Â| GSAP',
       progress: 92,
       summary: 'Reusable component libraries, accessibility, scroll-trigger storytelling.',
     },
     {
       badge: 'Backend',
-      title: 'Node �| Express �| REST �| Prisma',
+      title: 'Node Â| Express Â| REST Â| Prisma',
       progress: 78,
       summary: 'Secure APIs, API gateway integrations, and Postgres/MySQL operations.',
     },
     {
       badge: 'Cloud & Ops',
-      title: 'Vercel �| Docker �| CI/CD',
+      title: 'Vercel Â| Docker Â| CI/CD',
       progress: 74,
       summary: 'Preview deployments, telemetry dashboards, and release automation.',
     },
