@@ -1,52 +1,45 @@
-import React from 'react'
+import { useProfile } from '../../context/ProfileContext'
 
 const Footer = () => {
+  const { profile } = useProfile()
+  const { identity } = profile
+
   return (
-    <footer className="bg-gradient-to-r from-[#141e30] to-[#243b55] text-white p-6 md:p-12">
-      <div className="grid md:grid-cols-2 gap-10">
-        {/* Left Side */}
+    <footer className="bg-slate-950 border-t border-white/10 text-white px-6 lg:px-24 py-12">
+      <div className="grid gap-10 lg:grid-cols-3">
         <div>
-          <h2 className="text-3xl md:text-4xl font-bold leading-snug">
-            Want to work <br /> with us?
-          </h2>
-          <p className="text-gray-300 mt-4 max-w-md">
-            Stop thinking of something when you can have it! Contact us now and
-            make a rocket out of your website.
-          </p>
-          <p className="mt-6 text-sm text-gray-400">
-            Privacy Policy <br />
-            ⚠️ <br />
-            ©️
+          <p className="text-xs uppercase tracking-[0.4em] text-emerald-300">{identity.name}</p>
+          <h2 className="text-3xl font-semibold mt-2">{identity.tagline}</h2>
+          <p className="text-slate-400 mt-4 max-w-sm">
+            Designing ambitious experiences with React, GSAP, and a builder's mindset from {identity.location}.
           </p>
         </div>
-
-        {/* Right Side */}
-        <div className="flex flex-col space-y-6">
-          <div>
-            <h3 className="text-gray-400 uppercase text-sm">Send us a note</h3>
-            <a
-              href="mailto:hello@unikorns.work"
-              className="text-lg font-semibold hover:underline"
-            >
-              rishavr741@gmail.com
-            </a>
-          </div>
-
-          <div>
-            <h3 className="text-gray-400 uppercase text-sm">Follow me on:</h3>
-            <ul className="space-y-2">
-              <li><a href="https://www.instagram.com/rixhavraj?igsh=i" target='_blank' className="hover:underline">Instagram</a></li>
-              {/* <li><a href="#" className="hover:text-purple-400">Facebook</a></li> */}
-              <li><a href="https://www.linkedin.com/in/rixhavraj" target='_blank' className="hover:underline">LinkedIn</a></li>
-              <li><a href="https://github.com/rixhavraj" target='_blank' className="hover:underline">Github</a></li>
-              <li><a href = "https://x.com/rixhavraj" target='_blank' className = "hover:underline">𝕏</a></li>
-             
-            </ul>
-          </div>
+        <div>
+          <p className="text-xs uppercase tracking-[0.4em] text-emerald-300">Contact</p>
+          <a href={`mailto:${identity.email}`} className="text-xl font-semibold block mt-3 hover:text-emerald-300">
+            {identity.email}
+          </a>
+          <p className="text-slate-400 text-sm mt-2">Responses within 24 hours - Available for freelance & internships.</p>
+        </div>
+        <div>
+          <p className="text-xs uppercase tracking-[0.4em] text-emerald-300">Elsewhere</p>
+          <ul className="mt-3 space-y-1 text-slate-300">
+            {identity.socials.map((social) => (
+              <li key={social.label}>
+                <a href={social.url} target="_blank" rel="noreferrer" className="hover:text-white">
+                  {social.label}
+                </a>
+              </li>
+            ))}
+          </ul>
         </div>
       </div>
+      <div className="mt-10 border-t border-white/10 pt-6 flex flex-col md:flex-row gap-4 md:items-center md:justify-between text-xs text-slate-500">
+        <p>� {new Date().getFullYear()} Crafted during late-night caffeine sessions.</p>
+        <p>Deploy ready - Vercel rewrites configured.</p>
+      </div>
     </footer>
-  );
+  )
 }
 
 export default Footer
