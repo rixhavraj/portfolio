@@ -7,7 +7,6 @@ import { useProfile } from '../../context/ProfileContext'
 const Home = () => {
   const { profile } = useProfile()
   const { identity, hero, stats, timeline, skillTracks, projects, toolbelt, certifications, testimonial, callToAction } = profile
-  const portrait = identity.photo || '/rishav.jpg'
   const focusList = hero.focusAreas && hero.focusAreas.length ? hero.focusAreas : ['impactful products']
   const containerRef = useRef(null)
   const [focusIndex, setFocusIndex] = useState(0)
@@ -76,13 +75,6 @@ const Home = () => {
             </div>
           </div>
           <div className="space-y-4">
-            <figure className="relative rounded-3xl border border-white/10 overflow-hidden bg-white/5 shadow-2xl" data-floating-card>
-              <img src={portrait} alt={`${identity.name} portrait`} className="w-full h-auto object-contain bg-slate-900" />
-              <figcaption className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 to-transparent p-4 text-sm">
-                <p className="font-semibold text-white">{identity.name}</p>
-                <p className="text-slate-200">{identity.location}</p>
-              </figcaption>
-            </figure>
             <div className="grid gap-4">
               {stats.slice(0, 2).map((item, idx) => (
                 <article

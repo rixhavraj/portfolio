@@ -3,6 +3,7 @@ import { useProfile } from '../../context/ProfileContext'
 function About() {
   const { profile } = useProfile()
   const { identity, about } = profile
+  const portrait = identity.photo || '/rishav.jpg'
 
   return (
     <div className="bg-slate-950 text-white min-h-screen px-6 lg:px-24 pt-24 pb-16">
@@ -24,15 +25,24 @@ function About() {
             </article>
           </div>
         </div>
-        <div className="rounded-3xl border border-white/10 bg-gradient-to-br from-slate-900 to-slate-800 p-8 space-y-5">
-          <p className="text-xs uppercase tracking-[0.4em] text-emerald-300">Currently reading</p>
-          <p className="text-lg">{about.readingList}</p>
-          <p className="text-xs uppercase tracking-[0.4em] text-emerald-300">Playlists</p>
-          <ul className="text-sm text-slate-300 space-y-1">
-            {about.playlists.map((playlist) => (
-              <li key={playlist}>{playlist}</li>
-            ))}
-          </ul>
+        <div className="space-y-6">
+          <figure className="relative rounded-3xl border border-white/10 overflow-hidden bg-white/5 shadow-2xl">
+            <img src={portrait} alt={`${identity.name} portrait`} className="w-full h-auto object-contain bg-slate-900" />
+            <figcaption className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 to-transparent p-4 text-sm">
+              <p className="font-semibold text-white">{identity.name}</p>
+              <p className="text-slate-200">{identity.location}</p>
+            </figcaption>
+          </figure>
+          <div className="rounded-3xl border border-white/10 bg-gradient-to-br from-slate-900 to-slate-800 p-8 space-y-5">
+            <p className="text-xs uppercase tracking-[0.4em] text-emerald-300">Currently reading</p>
+            <p className="text-lg">{about.readingList}</p>
+            <p className="text-xs uppercase tracking-[0.4em] text-emerald-300">Playlists</p>
+            <ul className="text-sm text-slate-300 space-y-1">
+              {about.playlists.map((playlist) => (
+                <li key={playlist}>{playlist}</li>
+              ))}
+            </ul>
+          </div>
         </div>
       </section>
 

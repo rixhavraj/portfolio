@@ -41,7 +41,7 @@ export const defaultProfile = {
     {
       year: '2025',
       role: 'Technical Lead -- Campus Innovation Lab',
-      org: 'Bihar, India',
+      org: 'Delhi, India',
       bullets: [
         'Lead 18 student engineers across AI, IoT, and DevOps pods',
         'Scaled internal tooling from proof-of-concept to 1.3k monthly users',
@@ -49,8 +49,8 @@ export const defaultProfile = {
     },
     {
       year: '2024',
-      role: 'Community Co-organizer -- HackBihar',
-      org: 'Patna',
+      role: 'Community Co-organizer -- Hackathons',
+      org: 'Greater noida',
       bullets: [
         'Hosted 200+ hackers, curated mentorship content, and secured sponsors',
         'Built judging dashboard with live leaderboards plus Slack automations',

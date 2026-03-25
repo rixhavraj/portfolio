@@ -74,11 +74,14 @@ function Contact() {
               onChange={handleChange}
               className="w-full rounded-xl bg-slate-900/70 border border-white/10 px-4 py-3 focus:border-emerald-400 outline-none"
             >
-              <option>Website redesign</option>
-              <option>Headless WordPress build</option>
-              <option>Interactive storytelling</option>
-              <option>Hackathon mentorship</option>
-              <option>Internship opportunity</option>
+              <option>Website Development</option>
+              <option>App Development</option>
+              <option>UI/UX Design</option>
+              <option>Cybersecurity</option>
+              <option>App and website testing</option>
+              <option>WordPress Development</option>
+              <option>Video Editing</option>
+              <option>Other</option>
             </select>
           </div>
           <div>
@@ -104,7 +107,7 @@ function Contact() {
         <div className="space-y-6">
           <article className="rounded-2xl border border-white/10 bg-slate-900/70 p-6">
             <p className="text-xs uppercase tracking-[0.4em] text-emerald-300">Status</p>
-            <h2 className="text-2xl font-semibold mt-2">{contact.status}</h2>
+            <h2 className="text-2xl font-semibold mt-2">{ }</h2>
             <ul className="mt-4 space-y-2 text-sm text-slate-300 list-disc pl-5">
               {contact.bullets.map((bullet) => (
                 <li key={bullet}>{bullet}</li>
@@ -116,7 +119,7 @@ function Contact() {
             <div className="mt-3 space-y-2 text-sm">
               {contact.quickLinks.map((link) => (
                 <a key={link.label} href={link.url} target="_blank" rel="noreferrer" className="flex justify-between hover:text-emerald-300">
-                  {link.label} <span>-></span>
+                  {link.label} <span>&rarr;</span>
                 </a>
               ))}
             </div>
