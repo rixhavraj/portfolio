@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from 'react'
 import { useProfile } from '../../context/ProfileContext'
 
 // ── Real-time age counter ───────────────────────────────────
-const BIRTH_DATE = new Date('2003-07-20T00:00:00')
+const BIRTH_DATE = new Date('2006-09-20T00:00:00')
 
 function AgeCounter() {
   const [age, setAge] = useState('')
