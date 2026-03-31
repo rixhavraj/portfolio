@@ -1,0 +1,18 @@
+
+> portfolio@0.0.0 lint
+> eslint .
+
+
+C:\Users\rixha\WorkSpace\personal projects\project\portfolio-1\src\App.jsx
+  70:10  error  'cards' is assigned a value but never used. Allowed unused vars must match /^[A-Z_]/u    no-unused-vars
+  71:10  error  'loading' is assigned a value but never used. Allowed unused vars must match /^[A-Z_]/u  no-unused-vars
+  72:10  error  'error' is assigned a value but never used. Allowed unused vars must match /^[A-Z_]/u    no-unused-vars
+
+C:\Users\rixha\WorkSpace\personal projects\project\portfolio-1\src\compo\pages\Navbar.jsx
+  1:10  error  'useEffect' is defined but never used. Allowed unused vars must match /^[A-Z_]/u  no-unused-vars
+
+C:\Users\rixha\WorkSpace\personal projects\project\portfolio-1\src\context\ProfileContext.jsx
+  67:14  warning  Fast refresh only works when a file only exports components. Use a new file to share constants or functions between components  react-refresh/only-export-components
+
+✖ 5 problems (4 errors, 1 warning)
+

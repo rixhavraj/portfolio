@@ -1,47 +1,137 @@
 import { NavLink } from 'react-router-dom'
-import { useProfile } from '../../context/ProfileContext'
 
-const navItems = [
-  { label: 'Home', to: '/' },
-  { label: 'About', to: '/about' },
-  { label: 'Projects', to: '/projects' },
-  { label: 'Contact', to: '/contact' },
-  {/*{ label: 'Cards', to: '/cards' }, */}
-]
+// SVG Icons inline to avoid lucide brand icon issues
+const HomeIcon = () => (
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/>
+  </svg>
+)
 
-const linkClasses = ({ isActive }) =>
-  `text-sm font-medium tracking-wide transition ${
-    isActive ? 'text-emerald-300' : 'text-slate-300 hover:text-white'
-  }`
+const TerminalIcon = () => (
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <polyline points="4 17 10 11 4 5"/><line x1="12" y1="19" x2="20" y2="19"/>
+  </svg>
+)
 
-function Navbar() {
-  const { profile } = useProfile()
-  const { identity } = profile
+const SunIcon = () => (
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/>
+  </svg>
+)
 
+const MoonIcon = () => (
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/>
+  </svg>
+)
+{/*isDark, onToggleDark write this after onToggleCLI if the theme is working */}
+
+function Navbar({ onToggleCLI, }) {
   return (
-    <header className="fixed top-0 left-0 right-0 z-40 bg-slate-950/80 backdrop-blur border-b border-white/10">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
-        <NavLink to="/" className="flex items-center gap-3">
-          <img src="/RJLOGO.jpg" alt="RR monogram" className="h-10 w-10 rounded-full border border-white/20" />
-          <div className="text-xs uppercase tracking-[0.3em] text-slate-300">
-            {identity.name}
-            <p className="text-[0.6rem] normal-case tracking-[0.2em] text-slate-500">{identity.descriptor}</p>
-          </div>
-        </NavLink>
-        <nav className="hidden md:flex items-center gap-6">
-          {navItems.map((item) => (
-            <NavLink key={item.to} to={item.to} className={linkClasses}>
-              {item.label}
-            </NavLink>
-          ))}
-        </nav>
-        <a
-          href={`mailto:${identity.email}`}
-          className="px-4 py-2 rounded-full bg-emerald-400 text-slate-950 text-sm font-semibold shadow hover:-translate-y-0.5 transition"
+    <header
+      style={{
+        position: 'fixed',
+        top: 0,
+        left: 0,
+        right: 0,
+        zIndex: 50,
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'space-between',
+        padding: '12px 24px',
+        background: 'rgba(9,9,11,0.8)',
+        backdropFilter: 'blur(12px)',
+        borderBottom: '1px solid #27272a',
+      }}
+    >
+      {/* Home Icon */}
+      <NavLink
+        to="/"
+        style={{
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          width: 36,
+          height: 36,
+          borderRadius: 8,
+          border: '1px solid #27272a',
+          color: '#a1a1aa',
+          textDecoration: 'none',
+          transition: 'color 0.2s, background 0.2s',
+        }}
+        onMouseEnter={e => { e.currentTarget.style.color = '#fafafa'; e.currentTarget.style.background = '#27272a'; }}
+        onMouseLeave={e => { e.currentTarget.style.color = '#a1a1aa'; e.currentTarget.style.background = 'transparent'; }}
+      >
+        <HomeIcon />
+      </NavLink>
+
+      {/* Right side nav */}
+      <nav style={{ display: 'flex', alignItems: 'center', gap: 24 }}>
+        {['Home','Blog', 'Projects'].map(label => (
+          <NavLink
+            key={label}
+            to={`/${label.toLowerCase()}`}
+            style={({ isActive }) => ({
+              fontSize: 14,
+              color: isActive ? '#fafafa' : '#a1a1aa',
+              textDecoration: 'none',
+              transition: 'color 0.2s',
+            })}
+            onMouseEnter={e => { e.currentTarget.style.color = '#fafafa'; }}
+            onMouseLeave={e => { e.currentTarget.style.color = '#a1a1aa'; }}
+          >
+            {label}
+          </NavLink>
+        ))}
+
+        {/* Divider */}
+        <div style={{ width: 1, height: 16, background: '#27272a' }} />
+
+        {/* CLI button */}
+        <button
+          onClick={onToggleCLI}
+          title="Terminal mode"
+          style={{
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            background: 'none',
+            border: 'none',
+            cursor: 'pointer',
+            color: '#a1a1aa',
+            padding: 4,
+            borderRadius: 6,
+            transition: 'color 0.2s',
+          }}
+          onMouseEnter={e => { e.currentTarget.style.color = '#fafafa'; }}
+          onMouseLeave={e => { e.currentTarget.style.color = '#a1a1aa'; }}
         >
-          Book a call
-        </a>
-      </div>
+          <TerminalIcon />
+        </button>
+
+        {/* Theme toggle */}
+        {/*
+        <button
+          onClick={onToggleDark}
+          style={{
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            background: 'none',
+            border: 'none',
+            cursor: 'pointer',
+            color: '#a1a1aa',
+            padding: 4,
+            borderRadius: 6,
+            transition: 'color 0.2s',
+          }}
+          onMouseEnter={e => { e.currentTarget.style.color = '#fafafa'; }}
+          onMouseLeave={e => { e.currentTarget.style.color = '#a1a1aa'; }}
+        >
+          {isDark ? <SunIcon /> : <MoonIcon />}
+        </button>
+        */}
+      </nav>
     </header>
   )
 }

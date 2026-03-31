@@ -18,7 +18,7 @@ const Cards = ({ student }) => {
       <div className="relative mt-5 flex items-center justify-between text-xs text-slate-400">
         <span>Open to collaborate</span>
         <a href={portfolio ?? 'https://github.com/rixhavraj'} target="_blank" rel="noreferrer" className="text-emerald-300 font-semibold">
-          View work ->
+          View work -&gt;
         </a>
       </div>
     </article>

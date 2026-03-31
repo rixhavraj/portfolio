@@ -5,7 +5,7 @@ export const defaultProfile = {
     descriptor: 'Engineer | Designer | Mentor',
     location: 'Delhi, India',
     email: 'rishavr741@gmail.com',
-    photo: '/IMG-20250720-WA0004[1].jpg',
+    photo: 'rishav.jpg',
     socials: [
       { label: 'LinkedIn', url: 'https://www.linkedin.com/in/rixhavraj' },
       { label: 'GitHub', url: 'https://github.com/rixhavraj' },
@@ -176,7 +176,7 @@ export const defaultProfile = {
     },
   ],
   contact: {
-    status: 'Accepting new work for April 2026',
+    status: 'Accepting new work for May 2026',
     bullets: [
       'Part-time freelance retainers (8-12 hrs/week)',
       'Summer 2026 internships (Product Engineering / DevRel)',
