@@ -5,7 +5,7 @@ export const defaultProfile = {
     descriptor: 'Engineer | Designer | Mentor',
     location: 'Delhi, India',
     email: 'rishavr741@gmail.com',
-    photo: 'rishav.jpg',
+    photo: '/rishav.jpg',
     socials: [
       { label: 'LinkedIn', url: 'https://www.linkedin.com/in/rixhavraj' },
       { label: 'GitHub', url: 'https://github.com/rixhavraj' },
