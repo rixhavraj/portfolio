@@ -16,7 +16,7 @@ const deepMerge = (base, override) => {
   return override === undefined ? base : override
 }
 
-const STORAGE_KEY = 'portfolio_profile_v1'
+const STORAGE_KEY = 'portfolio_profile_v2'
 
 const ProfileContext = createContext({
   profile: defaultProfile,
