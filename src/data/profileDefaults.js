@@ -12,6 +12,7 @@ export const defaultProfile = {
       { label: 'Twitter', url: 'https://x.com/rixhavraj' },
       { label: 'Instagram', url: 'https://www.instagram.com/rixhavraj?igsh=i' },
       { label: 'Case Study', url: 'https://tekurious.in/' },
+      { label: 'Buy me a chai', url: 'https://buymeachai.ezee.li/rixhavraj' }
     ],
   },
   hero: {
@@ -137,28 +138,28 @@ export const defaultProfile = {
   },
   featuredProjects: [
     {
-      title: 'Tekurious Design System',
+      title: 'Tekurious',
       description: 'Multi-brand component library powering Tekurious marketing microsites with theming plus MDX docs.',
       deliverables: ['Design tokens', 'GSAP micro-interactions', 'Contentful integration'],
       metrics: '65% faster new-page launches',
-      stack: ['React', 'Storybook', 'GSAP', 'Contentful'],
+      stack: ['Wordpress', 'Storybook', 'GSAP', 'Contentful'],
       link: 'https://tekurious.in/',
     },
     {
-      title: 'Campus Compass OS',
-      description: 'Operates hackathon schedules, sponsor CRM, and live leaderboards with offline-ready PWA support.',
+      title: 'Hostel Websites',
+      description: 'Build a full stack hostel website fast, mobile-friendly with rooms, pricing, photos, contact details and a admin panel',
       deliverables: ['Role-based dashboards', 'WebSocket scoring', 'Incident command kit'],
       metrics: 'Handled 200+ concurrent users in 2025 finals',
-      stack: ['React', 'Express', 'MongoDB', 'Redis'],
-      link: 'https://github.com/rixhavraj',
+      stack: ['React', 'Express', 'MongoDB', 'Vercel', 'Framer Motion'],
+      link: 'https://hostel-frontend-phi.vercel.app/',
     },
     {
-      title: 'Scholar Wallet',
-      description: 'Finance dashboard for students with gamified budgeting, connected to Razorpay test rails.',
+      title: 'Kakashi-Game',
+      description: 'Build a game',
       deliverables: ['Plaid-style onboarding', 'Progressive disclosure UI', 'Vercel edge functions'],
       metrics: '90% retention across 4-week pilot',
-      stack: ['Next.js', 'Tailwind', 'Supabase', 'Vercel'],
-      link: 'https://github.com/rixhavraj',
+      stack: ['Javascript.js', 'Tailwind', 'Vercel'],
+      link: 'https://kakashi-game.vercel.app/',
     },
   ],
   labs: [
