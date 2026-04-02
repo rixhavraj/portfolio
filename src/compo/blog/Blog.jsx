@@ -67,7 +67,7 @@ function DocCard({ doc, query }) {
   })
 
   const categoryColors = {
-    tutorial: '#7c3aed',
+    research: '#7c3aed',
     guide: '#0e7490',
     blog: '#065f46',
     devlog: '#92400e',
@@ -255,10 +255,10 @@ export default function Blog() {
         <div style={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between', gap: 16, marginBottom: 40, flexWrap: 'wrap' }}>
           <div>
             <h1 style={{ fontSize: 'clamp(28px,5vw,36px)', fontWeight: 700, margin: '0 0 8px', letterSpacing: '-0.02em' }}>
-              blog
+              Blog
             </h1>
             <p style={{ margin: 0, fontSize: 15, color: '#71717a' }}>
-              Thoughts, tutorials, and documentation.
+              Thoughts, research, and documentation.
             </p>
           </div>
 

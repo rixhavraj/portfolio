@@ -129,7 +129,7 @@ export default function DocWriter() {
   const wordCount = form.content.trim().split(/\s+/).filter(Boolean).length
   const readTime = Math.max(1, Math.ceil(wordCount / 200))
 
-  const CATEGORIES = ['general', 'tutorial', 'guide', 'blog', 'devlog', 'notes']
+  const CATEGORIES = ['general', 'research', 'guide', 'blog', 'devlog', 'notes']
 
   return (
     <div style={{ minHeight: '100vh', background: '#09090b', color: '#fafafa', fontFamily: 'Inter, sans-serif' }}>
@@ -222,7 +222,7 @@ export default function DocWriter() {
             </div>
             <div>
               <label style={labelStyle}>Tags <span style={{ opacity: 0.5, textTransform: 'none', fontWeight: 400 }}>(comma separated)</span></label>
-              <input value={form.tags} onChange={set('tags')} placeholder="react, tutorial, css" style={inputStyle}
+              <input value={form.tags} onChange={set('tags')} placeholder="react, research, css" style={inputStyle}
                 onFocus={e => e.target.style.borderColor = '#3f3f46'} onBlur={e => e.target.style.borderColor = '#27272a'} />
             </div>
             <div>
