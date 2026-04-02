@@ -290,7 +290,7 @@ export default function Home() {
                 title: 'Technical Lead',
                 company: 'Campus Innovation Lab',
                 period: 'Aug 2025 – Dec 2025',
-                desc: 'Led 18 student engineers across AI, IoT, and DevOps pods. Scaled tooling to 1.3k monthly users.',
+                desc: 'Lead students, engineers across AI, IoT, and DevOps WebDev. SEO.',
               },
               {
                 logo: '💡',
