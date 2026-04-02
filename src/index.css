@@ -1,0 +1,124 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+  color-scheme: dark;
+  --bg: #09090b;
+  --fg: #fafafa;
+  --muted: #a1a1aa;
+  --border: #27272a;
+  --card: #18181b;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  background: var(--bg);
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', ui-sans-serif, system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--fg);
+  font-size: 15px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: rgba(255,255,255,0.15);
+}
+
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: #3f3f46; border-radius: 6px; }
+::-webkit-scrollbar-thumb:hover { background: #52525b; }
+
+/* Meteor animation */
+@keyframes meteorFall {
+  0% {
+    transform: rotate(215deg) translateX(0);
+    opacity: 1;
+  }
+  70% { opacity: 1; }
+  100% {
+    transform: rotate(215deg) translateX(-500px);
+    opacity: 0;
+  }
+}
+
+.meteor {
+  position: absolute;
+  height: 2px;
+  width: 80px;
+  border-radius: 9999px;
+  background: linear-gradient(90deg, #fff 0%, transparent 100%);
+  box-shadow: 0 0 6px rgba(255,255,255,0.4);
+  animation: meteorFall linear infinite;
+  opacity: 0;
+}
+
+/* Blob background elements */
+.blob {
+  position: absolute;
+  border-radius: 9999px;
+  filter: blur(80px);
+  opacity: 0.15;
+  pointer-events: none;
+}
+
+/* Terminal cursor blink */
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.cursor-blink {
+  animation: blink 1s step-end infinite;
+}
+
+/* Fade-in-up animation */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+/* Skill badge hover */
+.skill-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  font-size: 13px;
+  color: var(--fg);
+  background: transparent;
+  transition: background 0.2s, border-color 0.2s;
+  cursor: default;
+}
+
+.skill-badge:hover {
+  background: #27272a;
+  border-color: #3f3f46;
+}
+
+/* Work item hover */
+.work-item {
+  padding: 12px 16px;
+  margin: 0 -16px;
+  border-radius: 10px;
+  transition: background 0.2s;
+}
+
+.work-item:hover {
+  background: rgba(255,255,255,0.04);
+}
