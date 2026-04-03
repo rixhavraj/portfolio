@@ -17,7 +17,7 @@ const parseOrigins = (...values) =>
     .map(normalizeOrigin)
     .filter(Boolean)
 
-const localOrigins = ['http://localhost:5173', 'http://localhost:5174', 'http://localhost:3000']
+const localOrigins = ['http://localhost:5173', 'http://localhost:5174', 'http://localhost:3000, frontend']
 const envOrigins = parseOrigins(frontend, backend)
 
 const allowedOrigins = new Set([...parseOrigins(...localOrigins), ...envOrigins])
