@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react'
 import { useNavigate, useSearchParams } from 'react-router-dom'
+import { DOCS_API } from './apiBase'
 
-const API_BASE = import.meta.env.VITE_API_BASE_URL?.trim() || (import.meta.env.DEV ? 'http://localhost:3001' : '')
-const API = `${API_BASE}/api/docs`
+const API = DOCS_API
 const ADMIN_ALL = `${API}/admin/all`
 
 // ── Icons ─────────────────────────────────────────────────

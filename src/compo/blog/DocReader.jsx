@@ -1,9 +1,9 @@
 import { useState, useEffect } from 'react'
 import { useParams, Link, useNavigate } from 'react-router-dom'
 import { marked } from 'marked'
+import { DOCS_API } from './apiBase'
 
-const API_BASE = import.meta.env.VITE_API_BASE_URL?.trim() || (import.meta.env.DEV ? 'https://portfoliowebsite-xtc0.onrender.com' : '')
-const API = `${API_BASE}/api/docs`
+const API = DOCS_API
 
 // Configure marked
 marked.setOptions({
