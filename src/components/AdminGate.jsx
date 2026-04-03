@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 
 const STORAGE_KEY = 'portfolio_admin_unlocked'
-const passcode = import.meta.env.VITE_ADMIN_PASSCODE?.trim()
+const passcode = import.meta.env.ADMIN_PASSCODE?.trim()
 
 const AdminGate = ({ children }) => {
   const [unlocked, setUnlocked] = useState(false)

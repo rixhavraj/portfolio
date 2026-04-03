@@ -62,7 +62,6 @@ docSchema.index({ title: 'text', excerpt: 'text', content: 'text', tags: 'text',
 })
 
 // Slug index
-docSchema.index({ slug: 1 })
 docSchema.index({ published: 1, createdAt: -1 })
 
 export const Doc = mongoose.model('Doc', docSchema)

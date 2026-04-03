@@ -280,7 +280,6 @@ export default function Docreader() {
                         paddingLeft: h.level === 1 ? 0 : h.level === 2 ? 12 : 24,
                         padding: `5px ${h.level === 1 ? 0 : h.level === 2 ? 12 : 24}px 5px`,
                         borderLeft: `2px solid ${activeHeading === h.id ? '#22c55e' : 'transparent'}`,
-                        paddingLeft: (h.level - 1) * 12,
                         color: activeHeading === h.id ? '#4ade80' : '#71717a',
                         textDecoration: 'none',
                         lineHeight: 1.4,
