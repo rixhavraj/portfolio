@@ -1,27 +1,24 @@
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 
 const STORAGE_KEY = 'portfolio_admin_unlocked'
-const passcode = import.meta.env.ADMIN_PASSCODE?.trim()
+const ADMIN_PASSCODE = import.meta.env.VITE_ADMIN_PASSCODE
+const AUTH_API = import.meta.env.DEV || import.meta.env.local;
 
 const AdminGate = ({ children }) => {
-  const [unlocked, setUnlocked] = useState(false)
+  const [unlocked, setUnlocked] = useState(() => window.sessionStorage.getItem(STORAGE_KEY) === 'true')
   const [input, setInput] = useState('')
   const [error, setError] = useState('')
 
-  useEffect(() => {
-    if (typeof window === 'undefined') return
-    if (window.sessionStorage.getItem(STORAGE_KEY) === 'true') {
-      setUnlocked(true)
-    }
-  }, [])
-
   const handleSubmit = (event) => {
     event.preventDefault()
-    if (!passcode) {
-      setError('Set VITE_ADMIN_PASSCODE in your .env file to enable admin access.')
+    if (!AUTH_API) {
+      setError('Admin passcode is not configured in environment.')
+      if(!ADMIN_PASSCODE){
+        setError('Admin passcode is not configured in environment. Please set VITE_ADMIN_PASSCODE in .env file.')
+      }
       return
     }
-    if (input === passcode) {
+    if (input === ADMIN_PASSCODE) {
       setUnlocked(true)
       window.sessionStorage.setItem(STORAGE_KEY, 'true')
       setError('')
@@ -53,9 +50,7 @@ const AdminGate = ({ children }) => {
     <div className="min-h-screen bg-slate-950 text-white flex items-center justify-center px-6">
       <div className="max-w-md w-full bg-slate-900/70 border border-white/10 rounded-3xl p-8 space-y-4">
         <h1 className="text-2xl font-semibold">Restricted</h1>
-        <p className="text-sm text-slate-400">
-          Enter the passcode configured as <code>VITE_ADMIN_PASSCODE</code> to continue.
-        </p>
+        <p className="text-sm text-slate-400">Enter the passcode to continue.</p>
         <form onSubmit={handleSubmit} className="space-y-4">
           <input
             type="password"
