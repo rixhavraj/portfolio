@@ -14,7 +14,7 @@ const AdminGate = ({ children }) => {
     if (!AUTH_API) {
       setError('Admin passcode is not configured in environment.')
       if(!ADMIN_PASSCODE){
-        setError('Admin passcode is not configured in environment. Please set VITE_ADMIN_PASSCODE in .env file.')
+        setError('wrong admin password')
       }
       return
     }
