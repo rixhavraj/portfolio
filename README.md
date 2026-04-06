@@ -45,3 +45,5 @@ Set these env vars in Render:
 ## Important
 
 Some auth files under `backend/routes/` still contain broken imports/logic from older code and are not mounted in `backend/server.js` yet. The docs API routes are wired and deploy-ready.
+
+git push 
