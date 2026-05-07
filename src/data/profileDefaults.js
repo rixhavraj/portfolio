@@ -1,3 +1,5 @@
+import rishavPhoto from '../assets/rishav.jpg'
+
 export const defaultProfile = {
   identity: {
     name: 'Rishav Raj',
@@ -5,7 +7,7 @@ export const defaultProfile = {
     descriptor: 'Engineer | Designer | Mentor',
     location: 'Delhi, India',
     email: 'rishavr741@gmail.com',
-    photo: 'rishav.jpg',
+    photo: rishavPhoto,
     socials: [
       { label: 'LinkedIn', url: 'https://www.linkedin.com/in/rixhavraj' },
       { label: 'GitHub', url: 'https://github.com/rixhavraj' },
