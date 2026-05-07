@@ -3,7 +3,7 @@ import { useProfile } from '../../context/ProfileContext'
 function About() {
   const { profile } = useProfile()
   const { identity, about } = profile
-  const portrait = identity.photo || '/portfolio/rishav.jpg'
+  const portrait = identity.photo || '/rishav.jpg'
 
   return (
     <div className="bg-slate-950 text-white min-h-screen px-6 lg:px-24 pt-24 pb-16">
