@@ -411,7 +411,7 @@ export default function Home() {
                   justifyContent: 'center',
                   fontSize: 20,
                 }}>
-                  {i === 0 ? '🎨' : i === 1 ? '🏨' : '🎮'}
+                  {i === 0 ? '🎨' : i === 1 ? '🏨' : i===2 ? '🎮': i='🛜'}
                 </div>
 
                 <div style={{ flex: 1, minWidth: 0 }}>
