@@ -5,7 +5,7 @@ export const defaultProfile = {
     descriptor: 'Engineer | Designer | Mentor',
     location: 'Delhi, India',
     email: 'rishavr741@gmail.com',
-    photo: '/rishav.jpg',
+    photo: 'rishav.jpg',
     socials: [
       { label: 'LinkedIn', url: 'https://www.linkedin.com/in/rixhavraj' },
       { label: 'GitHub', url: 'https://github.com/rixhavraj' },
@@ -84,7 +84,7 @@ export const defaultProfile = {
       description: 'A social learning hub with personalized dashboards and Notion-style content blocks.',
       highlight: '2.1k monthly active students',
       stack: ['React', 'Node', 'Tailwind', 'Supabase'],
-      media: '/Screen Recording 2025-09-16 222521.mp4',
+      media: 'Screen Recording 2025-09-16 222521.mp4',
       link: 'https://tekurious.in/',
     },
     {
@@ -92,7 +92,7 @@ export const defaultProfile = {
       description: 'Command center for clubs with analytics, sponsor CRM, and real-time event maps.',
       highlight: 'Reduced planning time by 38%',
       stack: ['React', 'GSAP', 'Express', 'MongoDB'],
-      media: '/Screen Recording 2025-09-16 224952.mp4',
+      media: 'Screen Recording 2025-09-16 224952.mp4',
       link: 'https://github.com/rixhavraj',
     },
   ],
