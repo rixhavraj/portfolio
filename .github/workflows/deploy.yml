@@ -27,12 +27,21 @@ jobs:
         run: npm install
       - name: Build
         run: npm run build
+      - name: Verify build output
+        run: |
+          echo "Checking for build output directory..."
+          ls -la docs/
+          if [ ! -f "docs/index.html" ]; then
+            echo "ERROR: docs/index.html not found!"
+            exit 1
+          fi
+          echo "✓ Build output verified successfully"
       - name: Setup Pages
         uses: actions/configure-pages@v4
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: './dist'
+          path: './docs'
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
