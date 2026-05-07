@@ -161,6 +161,14 @@ export const defaultProfile = {
       stack: ['Javascript.js', 'Tailwind', 'Vercel'],
       link: 'https://kakashi-game.vercel.app/',
     },
+     {
+      title: 'Net Speed',
+      description: 'windows internet speed check app',
+      deliverables: ['Plaid-style onboarding', 'Progressive disclosure UI', 'Vercel edge functions'],
+      metrics: '90% retention across 4-week pilot',
+      stack: ['Javascript.js', 'Tailwind','cpp','Windows SDK', 'Vercel'],
+      link: 'https://rixhavraj.github.io/NetSpeed/',
+    },
   ],
   labs: [
     {
