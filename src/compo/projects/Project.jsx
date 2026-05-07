@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { useNavigate, useLocation } from 'react-router-dom'
+
 
 // ── Meteor background (reused from Home) ──────────────────
 const meteors = Array.from({ length: 15 }, (_, i) => ({
