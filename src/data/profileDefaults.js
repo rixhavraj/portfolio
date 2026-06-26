@@ -157,6 +157,7 @@ export const defaultProfile = {
     },
     {
       title: 'Kakashi-Game',
+      status:'progress',
       description: 'Build a game',
       deliverables: ['Plaid-style onboarding', 'Progressive disclosure UI', 'Vercel edge functions'],
       metrics: '90% retention across 4-week pilot',
@@ -165,12 +166,103 @@ export const defaultProfile = {
     },
      {
       title: 'Net Speed',
-      description: 'windows internet speed check app',
+      description: 'The ultimate net speed and internet speed meter downloader. A beautifully minimal tool that downloads inside your PC and shows your real-time network speed in an always-on-top widget.',
       deliverables: ['Plaid-style onboarding', 'Progressive disclosure UI', 'Vercel edge functions'],
       metrics: '90% retention across 4-week pilot',
       stack: ['Javascript.js', 'Tailwind','cpp','Windows SDK', 'Vercel'],
       link: 'https://rixhavraj.github.io/NetSpeed/',
     },
+    {
+  title: 'Discord Bot & Server Automation',
+  description: 'Developed custom Discord bots and server automation systems for moderation, ticket management, welcome messages, role assignment, logging, slash commands, AI integration, and community management. Built scalable automation to reduce manual administration and improve server engagement.',
+  deliverables: [
+    'Moderation Bot',
+    'Ticket System',
+    'Role Automation',
+    'Welcome & Logging',
+    'AI Chat Integration'
+  ],
+  metrics: 'Automated server management and reduced manual moderation tasks.',
+  stack: [
+    'Discord.js',
+    'Node.js',
+    'JavaScript',
+    'Discord API',
+    'REST API',
+    'Webhooks',
+    'AI Integration'
+  ],
+  link: '',
+},
+{
+  title: 'AI Workflow Automation',
+  description: 'Designed intelligent workflow automations using n8n, Gemini AI, Gmail, Google Sheets, Telegram, Discord, and REST APIs. Automated email classification, job opportunity detection, notifications, data extraction, and business workflows to eliminate repetitive manual tasks.',
+  deliverables: [
+    'Email Automation',
+    'Telegram Alerts',
+    'Google Sheets Integration',
+    'AI Email Classification',
+    'Business Workflow Automation'
+  ],
+  metrics: 'Reduced manual email processing through AI-powered automation workflows.',
+  stack: [
+    'n8n',
+    'Gemini AI',
+    'Gmail API',
+    'Google Sheets API',
+    'Telegram Bot API',
+    'REST APIs',
+    'OAuth2',
+    'JavaScript'
+  ],
+  link: '#',
+},
+{
+  title: 'Roblox Game Development',
+  description: 'Developed Roblox games featuring NPC AI, combat systems, animations, UI, datastore integration, scripting, and multiplayer mechanics using Roblox Studio and Lua.',
+  deliverables: [
+    'NPC AI',
+    'Combat System',
+    'Animations',
+    'Custom UI',
+    'Game Scripting'
+  ],
+  metrics: 'Built reusable game systems and optimized gameplay mechanics.',
+  stack: [
+    'Roblox Studio',
+    'Lua',
+    'Pathfinding',
+    'DataStore',
+    'RemoteEvents',
+    'Game UI'
+  ],
+  link: '#',
+},
+{
+  title: 'Website & Business Automation',
+  description: 'Built automation systems for websites that connect contact forms, CRMs, Google Sheets, AI services, Gmail, Telegram, and third-party APIs to automate lead management and business operations.',
+  deliverables: [
+    'Lead Capture',
+    'CRM Integration',
+    'AI Processing',
+    'Email Automation',
+    'Analytics'
+  ],
+  metrics: 'Automated lead tracking and business processes across multiple platforms.',
+  stack: [
+    'React',
+    'Node.js',
+    'Express',
+    'MongoDB',
+    'n8n',
+    'REST APIs',
+    'Google Workspace'
+  ],
+  link: '#',
+},
+
+
+
   ],
   labs: [
     {

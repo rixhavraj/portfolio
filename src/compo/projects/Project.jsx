@@ -79,6 +79,16 @@ const PROJECTS = [
     emoji: '🦷',
     color: '#1e3a5f',
   },
+   {
+    title: 'Gym Demo',
+    period: 'Sep 2024 – Oct 2024',
+    description: 'Modern and professional GYM website with Ai, admin management, and responsive UI built with React and TailwindCSS Many more features.',
+    website: 'https://pro-gym-beige.vercel.app/',
+    source: 'https://github.com/rixhavraj/pro-gym',
+    image: null,
+    emoji: '💪',
+    color: '#1e3a5f',
+  }
 ]
 
 // ── Project Card ──────────────────────────────────────────
