@@ -46,6 +46,12 @@
 
 @media (max-width: 600px) {
 
+    .marquee-group {
+        gap: 10px;
+        padding: 0 12px;
+        font-size: 0.55rem;
+    }
+
     .navbar {
         height: 75px;
     }

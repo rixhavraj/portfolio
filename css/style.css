@@ -22,6 +22,7 @@
 
 html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 body {
@@ -29,6 +30,7 @@ body {
     color: var(--text);
     font-family: "Manrope", sans-serif;
     overflow-x: hidden;
+    width: 100%;
 }
 
 body.light {
@@ -220,7 +222,7 @@ button {
     margin: auto;
 
     display: grid;
-    grid-template-columns: 1.1fr 0.9fr;
+    grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
 
     align-items: center;
 
@@ -280,9 +282,17 @@ button {
 }
 
 .hero h1 span {
+    display: inline-block;
+
+    font-family: "Manrope", sans-serif;
+    font-weight: 800;
+
     color: transparent;
 
-    -webkit-text-stroke: 1px var(--text);
+    -webkit-text-stroke: 1.25px var(--text);
+
+    letter-spacing: -0.04em;
+    white-space: nowrap;
 }
 
 .typing-container {
@@ -387,6 +397,8 @@ button {
 .hero-visual {
     position: relative;
 
+    min-width: 0;
+
     height: 500px;
 
     display: flex;
@@ -397,6 +409,7 @@ button {
 
 .code-window {
     width: 480px;
+    max-width: 100%;
 
     border: 1px solid var(--border);
 
@@ -689,9 +702,13 @@ button {
 }
 
 .project-image {
+    position: relative;
+
     aspect-ratio: 16 / 10;
 
     border: 1px solid var(--border);
+
+    overflow: hidden;
 
     background:
         radial-gradient(
@@ -702,7 +719,38 @@ button {
         var(--surface);
 }
 
+.project-photo {
+    position: absolute;
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    opacity: 0.7;
+    filter: saturate(0.85) contrast(1.05);
+    transition: transform 0.6s ease, opacity 0.6s ease;
+}
+
+.project-image::after,
+.project-card-image::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(5, 5, 5, 0.12), rgba(5, 5, 5, 0.78));
+    pointer-events: none;
+}
+
+.project-image:hover .project-photo,
+.project-card:hover .project-photo {
+    transform: scale(1.04);
+    opacity: 0.86;
+}
+
 .project-placeholder {
+    position: relative;
+    z-index: 1;
+
     width: 100%;
     height: 100%;
 
@@ -1278,6 +1326,8 @@ footer {
 
     padding: 20px;
 
+    overflow-y: auto;
+
     z-index: 500;
 }
 
@@ -1287,6 +1337,10 @@ footer {
 
 .modal-content {
     width: min(700px, 100%);
+
+    max-height: min(720px, calc(100vh - 40px));
+
+    overflow-y: auto;
 
     background: var(--surface);
 
@@ -1352,6 +1406,10 @@ footer {
     position: relative;
     overflow: hidden;
     isolation: isolate;
+}
+
+.project-art .project-photo {
+    z-index: 0;
 }
 
 .project-art > span,

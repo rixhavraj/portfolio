@@ -96,15 +96,28 @@
 
     display: flex;
 
-    gap: 35px;
+    will-change: transform;
+
+    animation: marquee 24s linear infinite;
+}
+
+.marquee-group {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    width: 100vw;
+    min-width: 100vw;
+    padding: 0 4vw;
+
+    gap: 24px;
 
     font-family: "DM Mono", monospace;
 
     font-size: 0.7rem;
 
     color: var(--muted);
-
-    animation: marquee 20s linear infinite;
+    white-space: nowrap;
 }
 
 .marquee-track b {
@@ -118,7 +131,7 @@
     }
 
     to {
-        transform: translateX(-50%);
+        transform: translateX(-100vw);
     }
 
 }
