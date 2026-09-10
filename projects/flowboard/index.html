@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Flowboard, a local-first project board concept by Omesh Giri.">
+    <title>Flowboard | Omesh Giri</title>
+    <style>
+        :root { --ink:#151a2b; --muted:#69708a; --line:#e7e9f1; --canvas:#f7f8fc; --card:#fff; --violet:#6857e8; --mint:#60dbbd; --amber:#ffbd59; }
+        * { box-sizing:border-box; } body { margin:0; background:var(--canvas); color:var(--ink); font:15px/1.5 Inter, ui-sans-serif, system-ui, sans-serif; }
+        button, input, select { font:inherit; } button { cursor:pointer; } .shell { max-width:1440px; margin:auto; padding:26px clamp(18px,4vw,64px) 48px; }
+        header { display:flex; align-items:center; justify-content:space-between; gap:18px; } .brand { display:flex; align-items:center; gap:10px; font-size:19px; font-weight:800; letter-spacing:-.04em; } .brand-mark { display:grid; place-items:center; width:33px; height:33px; border-radius:10px; color:#fff; background:var(--violet); box-shadow:0 9px 18px #6857e840; }
+        .header-actions { display:flex; align-items:center; gap:14px; } .avatar { display:grid; place-items:center; width:34px; height:34px; border:2px solid #fff; border-radius:50%; background:#fcce9c; font-size:12px; font-weight:700; } .back { color:var(--muted); font-size:13px; text-decoration:none; }
+        .intro { display:flex; justify-content:space-between; align-items:end; gap:24px; margin:66px 0 36px; } .eyebrow { margin:0 0 7px; color:var(--violet); font-size:11px; font-weight:800; letter-spacing:.12em; text-transform:uppercase; } h1 { margin:0; font-size:clamp(2rem,5vw,4.25rem); letter-spacing:-.065em; line-height:.95; } .intro p { max-width:385px; margin:0; color:var(--muted); }
+        .toolbar { display:flex; align-items:center; justify-content:space-between; gap:16px; margin-bottom:22px; } .views { display:flex; gap:4px; padding:4px; border:1px solid var(--line); border-radius:10px; background:#fff; } .view { padding:8px 12px; border:0; border-radius:7px; color:var(--muted); background:transparent; font-size:13px; } .view.active { color:var(--ink); background:#f1effe; font-weight:700; } .add { border:0; border-radius:9px; padding:11px 15px; color:#fff; background:var(--violet); box-shadow:0 7px 16px #6857e844; font-weight:700; }
+        .board { display:grid; grid-template-columns:repeat(3,minmax(240px,1fr)); gap:16px; } .column { min-height:416px; padding:14px; border:1px solid var(--line); border-radius:14px; background:#eff1f7; } .column-head { display:flex; justify-content:space-between; align-items:center; margin:0 2px 14px; } .column-title { display:flex; gap:8px; align-items:center; font-size:13px; font-weight:800; } .dot { width:8px; height:8px; border-radius:50%; background:var(--violet); } .column:nth-child(2) .dot { background:var(--amber); } .column:nth-child(3) .dot { background:var(--mint); } .count { display:grid; place-items:center; width:22px; height:22px; border-radius:7px; color:var(--muted); background:#fff; font-size:11px; }
+        .task-list { display:grid; gap:11px; } .task { padding:16px; border:1px solid #e6e8f0; border-radius:11px; background:var(--card); box-shadow:0 2px 3px #16234708; } .task-top { display:flex; justify-content:space-between; gap:12px; } .label { display:inline-block; padding:4px 7px; border-radius:5px; color:#5d48bf; background:#efedff; font-size:10px; font-weight:800; letter-spacing:.04em; text-transform:uppercase; } .label.design { color:#9c5723; background:#fff1de; } .label.research { color:#18725e; background:#dff9f1; } .task h2 { margin:11px 0 7px; font-size:15px; letter-spacing:-.02em; line-height:1.25; } .task p { margin:0 0 13px; color:var(--muted); font-size:12px; } .task-foot { display:flex; align-items:center; justify-content:space-between; color:var(--muted); font-size:11px; } .person { display:grid; place-items:center; width:23px; height:23px; border:1.5px solid #fff; border-radius:50%; color:#53417c; background:#e4defe; font-size:9px; font-weight:800; }
+        dialog { width:min(460px,calc(100% - 32px)); border:0; border-radius:18px; padding:28px; color:var(--ink); box-shadow:0 24px 80px #11162d44; } dialog::backdrop { background:#11162d88; backdrop-filter:blur(3px); } dialog h2 { margin:0 0 5px; font-size:25px; letter-spacing:-.04em; } dialog p { margin:0 0 20px; color:var(--muted); } form { display:grid; gap:13px; } label { display:grid; gap:6px; color:var(--muted); font-size:12px; font-weight:700; } input, select { width:100%; border:1px solid var(--line); border-radius:8px; padding:11px; color:var(--ink); background:#fff; outline-color:var(--violet); } .form-actions { display:flex; justify-content:flex-end; gap:10px; margin-top:4px; } .cancel { border:0; padding:10px 13px; color:var(--muted); background:transparent; } .save { border:0; border-radius:8px; padding:10px 14px; color:#fff; background:var(--violet); font-weight:700; }
+        @media (max-width:720px) { .intro { display:block; margin:46px 0 30px; } .intro p { margin-top:18px; } .board { grid-template-columns:1fr; } .column { min-height:auto; } .toolbar { align-items:flex-start; flex-direction:column; } }
+    </style>
+</head>
+<body>
+    <main class="shell">
+        <header><div class="brand"><span class="brand-mark">F</span> Flowboard</div><div class="header-actions"><a class="back" href="../../projects.html">&larr; Portfolio</a><span class="avatar" aria-label="Omesh Giri">OG</span></div></header>
+        <section class="intro"><div><p class="eyebrow">Project delivery workspace</p><h1>Keep the work moving.</h1></div><p>A local-first task board designed to make the next best action obvious to a small, busy team.</p></section>
+        <section class="toolbar" aria-label="Project controls"><div class="views"><button class="view active" data-view="all">All work</button><button class="view" data-view="todo">To do</button><button class="view" data-view="progress">In progress</button><button class="view" data-view="done">Done</button></div><button class="add" id="addTask">+ Add task</button></section>
+        <section class="board" id="board" aria-label="Project task board">
+            <article class="column" data-status="todo"><div class="column-head"><div class="column-title"><span class="dot"></span>To do</div><span class="count">0</span></div><div class="task-list"></div></article>
+            <article class="column" data-status="progress"><div class="column-head"><div class="column-title"><span class="dot"></span>In progress</div><span class="count">0</span></div><div class="task-list"></div></article>
+            <article class="column" data-status="done"><div class="column-head"><div class="column-title"><span class="dot"></span>Complete</div><span class="count">0</span></div><div class="task-list"></div></article>
+        </section>
+    </main>
+    <dialog id="taskDialog"><form id="taskForm"><div><h2>Add a task</h2><p>Save an action to the board. It will remain here on this device.</p></div><label>Task title<input name="title" required maxlength="70" placeholder="e.g. Review homepage copy"></label><label>Category<select name="label"><option value="Product">Product</option><option value="Design">Design</option><option value="Research">Research</option></select></label><label>Status<select name="status"><option value="todo">To do</option><option value="progress">In progress</option><option value="done">Complete</option></select></label><div class="form-actions"><button class="cancel" type="button" id="cancelTask">Cancel</button><button class="save">Add task</button></div></form></dialog>
+    <script>
+        const initialTasks = [
+            { title: "Refine the onboarding sequence", label: "Product", status: "todo", note: "Due Thursday", person: "SK" },
+            { title: "Prepare the content handoff", label: "Research", status: "todo", note: "3 subtasks", person: "OG" },
+            { title: "Design the empty state", label: "Design", status: "progress", note: "Due today", person: "AR" },
+            { title: "Mobile QA for the dashboard", label: "Product", status: "progress", note: "2 comments", person: "OG" },
+            { title: "Set up project conventions", label: "Product", status: "done", note: "Completed", person: "SK" }
+        ];
+        const storageKey = "flowboard-tasks";
+        let tasks = JSON.parse(localStorage.getItem(storageKey) || "null") || initialTasks;
+        const board = document.getElementById("board");
+        const dialog = document.getElementById("taskDialog");
+        function escapeHtml(value) { const element = document.createElement("span"); element.textContent = value; return element.innerHTML; }
+        function render(filter = "all") {
+            document.querySelectorAll(".column").forEach((column) => {
+                const status = column.dataset.status;
+                const list = column.querySelector(".task-list");
+                const items = tasks.filter((task) => task.status === status && (filter === "all" || status === filter));
+                column.hidden = filter !== "all" && status !== filter;
+                column.querySelector(".count").textContent = tasks.filter((task) => task.status === status).length;
+                list.replaceChildren(...items.map((task) => {
+                    const card = document.createElement("article"); card.className = "task";
+                    card.innerHTML = `<div class="task-top"><span class="label ${escapeHtml(task.label.toLowerCase())}">${escapeHtml(task.label)}</span><button aria-label="Move ${escapeHtml(task.title)} to next stage" data-task="${tasks.indexOf(task)}" style="border:0;background:transparent;color:#9aa0b3;font-size:18px">&#8942;</button></div><h2>${escapeHtml(task.title)}</h2><p>${escapeHtml(task.note)}</p><div class="task-foot"><span>${status === "done" ? "Finished" : "Next action"}</span><span class="person">${escapeHtml(task.person)}</span></div>`;
+                    card.querySelector("button").addEventListener("click", () => moveTask(tasks.indexOf(task)));
+                    return card;
+                }));
+            });
+        }
+        function moveTask(index) { const order = ["todo", "progress", "done"]; tasks[index].status = order[(order.indexOf(tasks[index].status) + 1) % order.length]; localStorage.setItem(storageKey, JSON.stringify(tasks)); render(document.querySelector(".view.active").dataset.view); }
+        document.querySelectorAll(".view").forEach((button) => button.addEventListener("click", () => { document.querySelector(".view.active").classList.remove("active"); button.classList.add("active"); render(button.dataset.view); }));
+        document.getElementById("addTask").addEventListener("click", () => dialog.showModal());
+        document.getElementById("cancelTask").addEventListener("click", () => dialog.close());
+        document.getElementById("taskForm").addEventListener("submit", (event) => { event.preventDefault(); const data = new FormData(event.currentTarget); tasks.unshift({ title: data.get("title"), label: data.get("label"), status: data.get("status"), note: "Just added", person: "OG" }); localStorage.setItem(storageKey, JSON.stringify(tasks)); event.currentTarget.reset(); dialog.close(); document.querySelector(".view.active").click(); });
+        render();
+    </script>
+</body>
+</html>

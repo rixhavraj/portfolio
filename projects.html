@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Interactive product concepts and frontend projects by Omesh Giri.">
+    <title>Projects | Omesh Giri</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <div class="cursor"></div>
+    <div class="cursor-dot"></div>
+    <div class="background-grid"></div>
+    <div class="glow glow-one"></div>
+
+    <header class="navbar">
+        <a href="index.html" class="logo" aria-label="Omesh Giri home">OG<span>.</span></a>
+        <nav class="nav-links" aria-label="Primary navigation">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="projects.html" class="active">Projects</a>
+            <a href="about.html#contact">Contact</a>
+        </nav>
+        <div class="nav-actions">
+            <button id="themeToggle" class="icon-button" aria-label="Toggle colour theme">&#9788;</button>
+            <a href="assets/resume/Omesh-Giri-Resume.pdf" class="resume-button" download>Resume &nearr;</a>
+        </div>
+        <button class="menu-button" id="menuButton" aria-label="Open navigation menu">&#9776;</button>
+    </header>
+
+    <main>
+        <section class="page-hero">
+            <span class="page-number">03 / PROJECTS</span>
+            <h1>THINGS I'VE <span>BUILT.</span></h1>
+            <p>
+                Three interactive product concepts that show how I approach clean interfaces,
+                practical user flows and small details that make a product feel finished.
+            </p>
+        </section>
+
+        <section class="projects-section section" aria-labelledby="projects-heading">
+            <div class="section-label"><span>01</span><span id="projects-heading">SELECTED WORK</span></div>
+
+            <div class="project-filters" aria-label="Filter projects">
+                <button class="filter active" data-filter="all">All work</button>
+                <button class="filter" data-filter="product">Product UI</button>
+                <button class="filter" data-filter="dashboard">Dashboards</button>
+                <button class="filter" data-filter="creative">Creative tools</button>
+            </div>
+
+            <div class="projects-grid" id="projectsGrid">
+                <article class="project-card" data-category="product">
+                    <div class="project-card-image project-art project-art-flowboard">
+                        <img class="project-photo" src="https://images.unsplash.com/photo-1558655146-d09347e92766?auto=format&fit=crop&w=1200&q=85" alt="A designer working on a digital product interface">
+                        <span>01</span>
+                        <div class="project-art-window" aria-hidden="true">
+                            <i></i><i></i><i></i>
+                            <b>Project clarity, in one place</b>
+                            <em></em><em></em><em></em>
+                        </div>
+                        <div class="project-icon">&nearr;</div>
+                    </div>
+                    <div class="project-card-content">
+                        <span>PRODUCT UI / LOCAL-FIRST</span>
+                        <h3>Flowboard</h3>
+                        <p>A focused task board for small teams, with task creation, status views and browser-based persistence.</p>
+                        <div class="tech-tags"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>LocalStorage</span></div>
+                        <button class="project-details" data-project="0">View case study &rarr;</button>
+                    </div>
+                </article>
+
+                <article class="project-card" data-category="dashboard">
+                    <div class="project-card-image project-art project-art-metricly">
+                        <span>02</span>
+                        <div class="project-art-chart" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+                        <div class="project-art-stat" aria-hidden="true">+24.8%<small>monthly growth</small></div>
+                        <div class="project-icon">&nearr;</div>
+                    </div>
+                    <div class="project-card-content">
+                        <span>ANALYTICS DASHBOARD</span>
+                        <h3>Metricly</h3>
+                        <p>An executive-friendly performance dashboard that turns campaign data into clear, actionable signals.</p>
+                        <div class="tech-tags"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>SVG</span></div>
+                        <button class="project-details" data-project="1">View case study &rarr;</button>
+                    </div>
+                </article>
+
+                <article class="project-card" data-category="creative">
+                    <div class="project-card-image project-art project-art-palette">
+                        <span>03</span>
+                        <div class="project-art-swatches" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
+                        <div class="project-art-type" aria-hidden="true">Aa</div>
+                        <div class="project-icon">&nearr;</div>
+                    </div>
+                    <div class="project-card-content">
+                        <span>CREATIVE TOOL</span>
+                        <h3>Palette Lab</h3>
+                        <p>A lightweight brand-palette explorer that creates colour directions and copies usable hex values in one click.</p>
+                        <div class="tech-tags"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>Clipboard API</span></div>
+                        <button class="project-details" data-project="2">View case study &rarr;</button>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="project-note section">
+            <div class="section-label"><span>02</span>HOW I BUILD</div>
+            <p>Each concept is responsive, keyboard-considerate and built with plain web technologies&mdash;no framework required to try it locally.</p>
+        </section>
+    </main>
+
+    <div class="project-modal" id="projectModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" aria-hidden="true">
+        <div class="modal-content">
+            <button class="modal-close" id="modalClose" aria-label="Close project details">&times;</button>
+            <span id="modalCategory">PROJECT</span>
+            <h2 id="modalTitle">Project</h2>
+            <p id="modalDescription">Description</p>
+            <div id="modalHighlights" class="project-highlights"></div>
+            <div id="modalTech" class="tech-tags"></div>
+            <div class="modal-buttons">
+                <a href="#" id="modalLive" class="primary-button">Open demo &nearr;</a>
+                <a href="#" id="modalGithub" class="secondary-button">View source &nearr;</a>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-top">
+            <div><div class="logo">OG<span>.</span></div><p>Building digital experiences with code &amp; creativity.</p></div>
+            <div class="footer-links"><a href="index.html">Home</a><a href="about.html">About</a><a href="projects.html">Projects</a><a href="about.html#contact">Contact</a></div>
+        </div>
+        <div class="footer-bottom"><span>&copy; 2026 Omesh Giri</span><span>Built with HTML, CSS &amp; JavaScript.</span></div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="js/projects.js"></script>
+</body>
+</html>

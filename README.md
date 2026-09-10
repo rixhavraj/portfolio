@@ -1,52 +1,29 @@
-# Portfolio (Frontend + Backend)
+# Portfolio
 
-This repository contains:
-- React + Vite frontend at repo root
-- Node.js + Express backend in `backend/`
+A responsive personal portfolio for Omesh Giri, built with HTML, CSS and vanilla JavaScript.
 
-## Local Development
+## Included interactive projects
 
-### 1) Frontend
-```bash
-npm install
-npm run dev
-```
+- **Flowboard** &mdash; a local-first task board. Add a task and move it through the workflow; data persists in the browser using LocalStorage.
+- **Metricly** &mdash; a responsive analytics dashboard with reporting-period controls and a dependency-free SVG chart.
+- **Palette Lab** &mdash; a visual-direction tool that generates palette variations and copies hex values to the clipboard.
 
-### 2) Backend
-```bash
-cd backend
-npm install
-npm run dev
-```
+The projects are product concepts, created to demonstrate interface design, responsive development and practical browser interactions.
 
-Backend env file (`backend/.env`):
-```env
-PORT=3001
-MONGODB_URI=your_mongodb_connection_string
-FRONTEND_URL=http://localhost:5173
-```
+## Run locally
 
-Frontend env file (`.env`):
-```env
-VITE_API_BASE_URL=http://localhost:3001
-VITE_ADMIN_PASSCODE=your_admin_passcode
-```
+Open `index.html` in a browser. The three demos are available on the Projects page or directly at:
 
-## Production Deployment (Render Blueprint)
+- `projects/flowboard/index.html`
+- `projects/metricly/index.html`
+- `projects/palette-lab/index.html`
 
-`render.yaml` creates:
-- `portfolio-frontend` (Static Site)
-- `portfolio-backend` (Web Service)
+No build tooling or package installation is required.
 
-Set these env vars in Render:
-- Frontend: `VITE_API_BASE_URL` = backend service URL
-- Backend: `MONGODB_URI`, `FRONTEND_URL` = frontend service URL
+## Publish with GitHub Pages
 
-## Important
+After pushing the repository, in GitHub open **Settings** &rarr; **Pages** and choose **Deploy from a branch**. Select the `main` branch and the `/ (root)` folder. GitHub will provide the public site URL.
 
-Some auth files under `backend/routes/` still contain broken imports/logic from older code and are not mounted in `backend/server.js` yet. The docs API routes are wired and deploy-ready.
+## Customisation
 
-git add something here
-and then push 
-so 6 tarikh ko main IILM me tha udha ek ladki milli joo bahut sundar thi 
-this is a new git push 
+Before sharing publicly, replace placeholder social links in `index.html` with the correct GitHub and LinkedIn profiles, and add a PDF to `assets/resume/` if a downloadable resume is needed.
