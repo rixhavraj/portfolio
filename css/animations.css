@@ -1,0 +1,145 @@
+/* =========================
+   PAGE LOAD
+========================= */
+
+.hero-content,
+.hero-visual,
+.page-hero {
+    animation: pageEnter 1s ease forwards;
+}
+
+@keyframes pageEnter {
+
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* =========================
+   FLOATING CARDS
+========================= */
+
+.card-one {
+    animation: floatOne 5s ease-in-out infinite;
+}
+
+.card-two {
+    animation: floatTwo 6s ease-in-out infinite;
+}
+
+.card-three {
+    animation: floatThree 5.5s ease-in-out infinite;
+}
+
+@keyframes floatOne {
+
+    0%,100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-15px);
+    }
+
+}
+
+@keyframes floatTwo {
+
+    0%,100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(15px);
+    }
+
+}
+
+@keyframes floatThree {
+
+    0%,100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+
+}
+
+
+/* =========================
+   MARQUEE
+========================= */
+
+.marquee {
+    overflow: hidden;
+
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+
+    margin-top: 50px;
+
+    padding: 20px 0;
+}
+
+.marquee-track {
+    width: max-content;
+
+    display: flex;
+
+    gap: 35px;
+
+    font-family: "DM Mono", monospace;
+
+    font-size: 0.7rem;
+
+    color: var(--muted);
+
+    animation: marquee 20s linear infinite;
+}
+
+.marquee-track b {
+    color: var(--cyan);
+}
+
+@keyframes marquee {
+
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+
+}
+
+
+/* =========================
+   SCROLL REVEAL
+========================= */
+
+.reveal {
+    opacity: 0;
+
+    transform: translateY(30px);
+
+    transition:
+        opacity 0.8s ease,
+        transform 0.8s ease;
+}
+
+.reveal.visible {
+    opacity: 1;
+
+    transform: translateY(0);
+}
