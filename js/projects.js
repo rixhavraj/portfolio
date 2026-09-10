@@ -10,7 +10,7 @@ const projects = [
         ],
         technologies: ["HTML", "CSS", "JavaScript", "LocalStorage"],
         live: "projects/flowboard/index.html",
-        github: "projects/flowboard/"
+        github: "https://github.com/theshemo12-prog/Portfolio/tree/main/projects/flowboard"
     },
     {
         category: "ANALYTICS DASHBOARD",
@@ -23,7 +23,7 @@ const projects = [
         ],
         technologies: ["HTML", "CSS", "JavaScript", "SVG"],
         live: "projects/metricly/index.html",
-        github: "projects/metricly/"
+        github: "https://github.com/theshemo12-prog/Portfolio/tree/main/projects/metricly"
     },
     {
         category: "CREATIVE TOOL",
@@ -36,7 +36,7 @@ const projects = [
         ],
         technologies: ["HTML", "CSS", "JavaScript", "Clipboard API"],
         live: "projects/palette-lab/index.html",
-        github: "projects/palette-lab/"
+        github: "https://github.com/theshemo12-prog/Portfolio/tree/main/projects/palette-lab"
     }
 ];
 
