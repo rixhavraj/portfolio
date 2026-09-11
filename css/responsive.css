@@ -1,0 +1,179 @@
+@media (max-width: 900px) {
+
+    .nav-links,
+    .nav-actions {
+        display: none;
+    }
+
+    .menu-button {
+        display: block;
+    }
+
+    .hero {
+        grid-template-columns: 1fr;
+
+        padding: 80px 0;
+    }
+
+    .hero-visual {
+        height: 400px;
+    }
+
+    .intro-content,
+    .about-grid,
+    .contact-grid {
+        grid-template-columns: 1fr;
+
+        gap: 40px;
+    }
+
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .project-preview {
+        grid-template-columns: 1fr;
+
+        gap: 30px;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .marquee-group {
+        gap: 10px;
+        padding: 0 12px;
+        font-size: 0.55rem;
+    }
+
+    .navbar {
+        height: 75px;
+    }
+
+    .hero {
+        min-height: auto;
+
+        padding: 70px 0;
+    }
+
+    .hero h1 {
+        font-size: clamp(4rem, 20vw, 6rem);
+    }
+
+    .hero-description {
+        font-size: 0.9rem;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+
+        align-items: stretch;
+    }
+
+    .hero-buttons a {
+        width: 100%;
+    }
+
+    .hero-socials {
+        flex-wrap: wrap;
+    }
+
+    .hero-visual {
+        height: 350px;
+    }
+
+    .code-window {
+        width: 100%;
+    }
+
+    .code-content {
+        padding: 20px;
+
+        font-size: 0.65rem;
+    }
+
+    .floating-card {
+        display: none;
+    }
+
+    .section {
+        padding-top: 100px;
+    }
+
+    .page-hero {
+        padding: 100px 0 60px;
+    }
+
+    .page-hero h1 {
+        font-size: clamp(3.5rem, 17vw, 6rem);
+    }
+
+    .timeline-item {
+        grid-template-columns: 1fr;
+
+        gap: 15px;
+    }
+
+    .project-image {
+        aspect-ratio: 1 / 1;
+    }
+
+    .project-info h3 {
+        font-size: 2.2rem;
+    }
+
+    .project-card-image {
+        height: 220px;
+    }
+
+    .modal-content {
+        padding: 35px 25px;
+    }
+
+    .modal-content h2 {
+        font-size: 2.2rem;
+    }
+
+    .modal-buttons {
+        flex-direction: column;
+    }
+
+    .modal-buttons a {
+        width: 100%;
+    }
+
+    .footer-top {
+        flex-direction: column;
+
+        gap: 35px;
+    }
+
+    .footer-links {
+        flex-wrap: wrap;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+
+        gap: 10px;
+    }
+
+}
+
+
+/* Hide cursor on touch devices */
+
+@media (hover: none) {
+
+    .cursor,
+    .cursor-dot {
+        display: none;
+    }
+
+}
