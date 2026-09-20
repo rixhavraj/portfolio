@@ -4,10 +4,10 @@ services:
     rootDir: .
     plan: free
     buildCommand: npm ci && npm run build
-    staticPublishPath: dist
+    staticPublishPath: docs
     envVars:
       - key: VITE_API_BASE_URL
-        sync: false
+        value: https://portfoliowebsite-xtc0.onrender.com
       - key: VITE_ADMIN_PASSCODE
         sync: false
     routes:
@@ -29,4 +29,4 @@ services:
       - key: MONGODB_URI
         sync: false
       - key: FRONTEND_URL
-        sync: false
+        value: https://portfolio-frontend.onrender.com

@@ -4,6 +4,16 @@ import { API_BASE, DOCS_API } from './apiBase'
 
 const API = DOCS_API
 
+async function readJsonResponse(response, endpoint) {
+  const contentType = response.headers.get('content-type') || ''
+  const body = await response.text()
+  if (!response.ok) throw new Error(`Backend error ${response.status} at ${endpoint}`)
+  if (!contentType.includes('application/json')) {
+    throw new Error(`Backend returned ${contentType || 'non-JSON'} from ${endpoint}`)
+  }
+  try { return JSON.parse(body) } catch { throw new Error(`Backend returned invalid JSON from ${endpoint}`) }
+}
+
 // ── Meteor background ────────────────────────────────────
 const METEORS = Array.from({ length: 12 }, (_, i) => ({
   id: i,
@@ -177,8 +187,7 @@ export default function Blog() {
       const params = new URLSearchParams({ page: pg, limit: 12 })
       if (cat) params.set('category', cat)
       const res = await fetch(`${API}?${params}`)
-      if (!res.ok) throw new Error(`Server error ${res.status}`)
-      const data = await res.json()
+      const data = await readJsonResponse(res, API)
       setDocs(data.docs || [])
       setTotalPages(data.pagination?.pages || 1)
     } catch (e) {
@@ -191,7 +200,7 @@ export default function Blog() {
   // Load categories
   useEffect(() => {
     fetch(`${API}/categories`)
-      .then(r => r.json())
+      .then(r => readJsonResponse(r, `${API}/categories`))
       .then(data => setCategories(Array.isArray(data) ? data : []))
       .catch(() => {})
   }, [])
@@ -210,8 +219,7 @@ export default function Blog() {
     searchDebounce.current = setTimeout(async () => {
       try {
         const res = await fetch(`${API}/search?q=${encodeURIComponent(query)}&limit=20`)
-        if (!res.ok) throw new Error('Search failed')
-        const data = await res.json()
+        const data = await readJsonResponse(res, `${API}/search`)
         setSearchResults(data.docs || [])
       } catch {
         setSearchResults([])
