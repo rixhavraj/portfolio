@@ -238,7 +238,7 @@ export default function Home() {
             Currently <strong style={{ color: '#fafafa' }}>freelancing</strong> and <strong style={{ color: '#fafafa' }}>collaborating</strong> with new people on exciting projects.
           </p>
           <p style={{ margin: '0 0 12px' }}>
-            I love building <a href="https://tekurious.in" target="_blank" rel="noreferrer" style={{ color: '#fafafa', textDecoration: 'underline', textDecorationColor: '#52525b', textUnderlineOffset: 3 }}>impactful products</a> and share thoughts on tech <a href="https://x.com/rixhavraj" target="_blank" rel="noreferrer" style={{ color: '#fafafa', textDecoration: 'underline', textDecorationColor: '#52525b', textUnderlineOffset: 3 }}>here</a>.
+            I love building <a href="https://rixhavraj.github.io/portfolio/#/projects" target="_blank" rel="noreferrer" style={{ color: '#fafafa', textDecoration: 'underline', textDecorationColor: '#52525b', textUnderlineOffset: 3 }}>impactful products</a> and share thoughts on tech <a href="https://rixhavraj.github.io/portfolio/#/blog" target="_blank" rel="noreferrer" style={{ color: '#fafafa', textDecoration: 'underline', textDecorationColor: '#52525b', textUnderlineOffset: 3 }}>here</a>.
           </p>
           <p style={{ margin: '0 0 12px' }}>
             Here's what I think about the <a href="#" style={{ color: '#fafafa', textDecoration: 'underline', textDecorationColor: '#52525b', textUnderlineOffset: 3 }}>future of computer science</a>.
@@ -411,7 +411,7 @@ export default function Home() {
                   justifyContent: 'center',
                   fontSize: 20,
                 }}>
-                  {i === 0 ? '🎨' : i === 1 ? '🏨' : i===2 ? '🎮': i='🛜'}
+                  {i === 0 ? '🎨' : i === 1 ? '🏨' : i===2 ? '🎮': i===3 ? '🛜':i===4? '🤖': i===5 ? '🖥️' : i===6 ? '🎮':i===7 ? '🖥️':i===8}
                 </div>
 
                 <div style={{ flex: 1, minWidth: 0 }}>
