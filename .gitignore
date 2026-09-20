@@ -20,7 +20,6 @@ coverage/
 .env
 .env.*
 !.env.example
-!.env.production
 
 # Editor/system files
 .vscode/*
