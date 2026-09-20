@@ -1,27 +1,33 @@
-const LOCAL_BACKEND = 'http://localhost:3001'
-const RENDER_BACKEND = import.meta.env.DEV 
+const normaliZeBase = (url = '')=>
+  String(url).trim().replace(/\/+$/, '');
 
-const normalizeBase = (url = '') => String(url).trim().replace(/\/+$/, '')
-
-const isLocalHost = (url = '') => /localhost|127\.0\.0\.1/i.test(url)
-
-const isBrowserLocal = () => {
-  if (typeof window === 'undefined') return false
-  return window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1'
-}
-
-const envBase = normalizeBase(import.meta.env.VITE_API_BASE_URL)
-
-export const API_BASE = (() => {
-  if (!envBase) {
-    return import.meta.env.DEV ? LOCAL_BACKEND : RENDER_BACKEND
+const isBrowserLocal = ()=>{
+  if(typeof windows === 'undefined'){
+    return false;
   }
 
-  if (isLocalHost(envBase) && !isBrowserLocal()) {
-    return RENDER_BACKEND
+  return(
+    window.location.hostname === 'localhost' ||
+    window.location.hostname === '127.0.0.1'
+  );
+};
+
+const envBase = normaliZeBase(
+  import.meta.env.VITE_API_BASE_URL
+);
+
+export const API_BASE = (()=>{
+  if(envBase){
+    return envBase;
+  }
+  if(import.meta.env.DEV &&isBrowserLocal()){
+    return 'http://localhost:3000';
   }
 
-  return envBase
-})()
+  throw new Error(
+    `VITE_API_BASE_URL IS not configure.`
+  );
+});
 
-export const DOCS_API = `${API_BASE}/api/docs`
+export const DOCS_API = `${API_BASE}/api/docs`;
+export const CATERORIES_API = `${API_BASE}//api/docs/categories`;
