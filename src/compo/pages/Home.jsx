@@ -383,6 +383,7 @@ export default function Home() {
                 href={proj.link}
                 target="_blank"
                 rel="noreferrer"
+                className="featured-project-link"
                 style={{
                   display: 'flex',
                   gap: 16,
@@ -414,14 +415,14 @@ export default function Home() {
                   {i === 0 ? '🎨' : i === 1 ? '🏨' : i===2 ? '🎮': i===3 ? '🛜':i===4? '🤖': i===5 ? '🖥️' : i===6 ? '🎮':i===7 ? '🖥️':i===8}
                 </div>
 
-                <div style={{ flex: 1, minWidth: 0 }}>
-                  <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                    <p style={{ margin: 0, fontWeight: 600, fontSize: 14, color: '#fafafa' }}>{proj.title}</p>
-                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#52525b" strokeWidth="2">
+                <div className="featured-project-copy" style={{ flex: 1, minWidth: 0 }}>
+                  <div className="featured-project-heading" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                    <p className="featured-project-title" style={{ margin: 0, fontWeight: 600, fontSize: 14, color: '#fafafa' }}>{proj.title}</p>
+                    <svg className="featured-project-arrow" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#52525b" strokeWidth="2">
                       <path d="M7 17L17 7M7 7h10v10" />
                     </svg>
                   </div>
-                  <p style={{ margin: '3px 0 0', fontSize: 13, color: '#71717a', lineHeight: 1.5 }}>{proj.description}</p>
+                  <p className="featured-project-description" style={{ margin: '3px 0 0', fontSize: 13, color: '#71717a', lineHeight: 1.5 }}>{proj.description}</p>
                   <div style={{ display: 'flex', gap: 6, marginTop: 8, flexWrap: 'wrap' }}>
                     {proj.stack.map(s => (
                       <span key={s} style={{ fontSize: 11, padding: '2px 8px', border: '1px solid #27272a', borderRadius: 4, color: '#71717a' }}>{s}</span>
