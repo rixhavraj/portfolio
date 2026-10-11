@@ -26,6 +26,43 @@ body {
   font-size: 15px;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+.featured-project-link {
+  width: 100%;
+  min-width: 0;
+}
+
+.featured-project-title,
+.featured-project-description {
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+.featured-project-arrow {
+  flex: 0 0 auto;
+  margin-left: 8px;
+}
+
+@media (max-width: 480px) {
+  .featured-project-link {
+    gap: 12px !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  .featured-project-link > div:first-child {
+    width: 56px !important;
+    height: 38px !important;
+    font-size: 18px !important;
+  }
+
+  .featured-project-heading {
+    align-items: flex-start !important;
+  }
 }
 
 ::selection {
